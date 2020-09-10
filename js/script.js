@@ -9,6 +9,7 @@ const main = document.getElementById("main");
 const form = document.getElementById("form");
 const search = document.getElementById("search");
 
+
 // initially get fav movies
 getMovies(APIURL);
 
@@ -32,10 +33,10 @@ function showMovies(movies) {
         movieEl.classList.add("movie");
 
         movieEl.innerHTML = `
-            <img
+            <a href="/info.html?id=${backdrop}"><img
                 src="${backdrop}"
                 alt="${title}"
-            />
+            /></a>
             <div class="movie-info">
                 <h3>${title}</h3>
                 <span class="${getClassByRate(
