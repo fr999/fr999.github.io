@@ -11,7 +11,7 @@ html {
 
 body {
   margin-bottom: 46px;
-  font-size: 14px;
+
   background-color: #22254b;
   margin: 0;
 }
@@ -99,7 +99,8 @@ main {
 
 
 .header-container {
-  background-color: #00435a;
+  /* background-color: #00435a; */
+  background-color: #373b69;
   color: #fff;
 
 }
