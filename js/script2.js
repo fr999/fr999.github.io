@@ -50,7 +50,6 @@ function showMovies(movies) {
             </div>
             <div class="dialog-image">
             <a href="javascript:void(0)"><img onclick="getLight(this.src)" src="${images[0]}"></a>
-
             <a href="javascript:void(0)"><img onclick="getLight(this.src)" src="${images[1]}"></a>
             <a href="javascript:void(0)"><img onclick="getLight(this.src)" src="${images[2]}"></a>
             <a href="javascript:void(0)"><img onclick="getLight(this.src)" src="${images[3]}"></a>

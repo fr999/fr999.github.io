@@ -25,6 +25,9 @@ body {
 main {
   display: flex;
   flex-wrap: wrap;
+  text-align: center;
+  margin: auto;
+  width: 1200px;
 }
 
 .movie {
@@ -34,12 +37,16 @@ main {
   overflow: hidden;
   position: relative;
   margin: 1rem;
-  width: 500px;
+  width: 560px;
 }
 
 .movie img {
   width: 100%;
   max-height: 150px;
+}
+
+.movie img:hover {
+  opacity: 0.5;
 }
 
 .movie-info {
@@ -323,12 +330,24 @@ main {
   background-color: #ececec;
   height: 46px;
   width: 100%;
+ 
 }
+
 
 .navbar-container p {
     display: table-cell;
     height: 46px;
     vertical-align: middle;
+    padding: 0 10rem;
+    color: black;
+  }
+  
+
+.navbar-container p a {
+  outline: none;
+  text-decoration: none;
+    color: black;
+
   }
 
 .navbar-nav {
