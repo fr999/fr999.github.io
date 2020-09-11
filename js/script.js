@@ -3,19 +3,25 @@ const APIURL = "https://raw.githubusercontent.com/LordVenom/f999/master/_data/co
 
 
 const main = document.getElementById("main");
+const form = document.getElementById("form");
+const search = document.getElementById("search");
 
 
 // initially get fav movies
-getMovies(APIURL);
+getMovies(APIURL, "");
 
-async function getMovies(url) {
+async function getMovies(url, search) {
     const resp = await fetch(url);
     const respData = await resp.json();
+    var result = respData.results;
 
-    //console.log(respData);
+    if (search) {
+        result = [respData.results.find(el => el.title === search)];  
+    }
 
-    showMovies(respData.results);
+    showMovies(result);
 }
+
 
 function showMovies(movies) {
     // clear main
@@ -41,5 +47,17 @@ function showMovies(movies) {
         main.appendChild(movieEl);
     });
 }
+
+form.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const searchTerm = search.value;
+
+    if (searchTerm) {
+        getMovies(APIURL, searchTerm);
+
+        search.value = "";
+    }
+});
 
 

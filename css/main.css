@@ -267,6 +267,7 @@ main {
     font-weight: bold;
 
     margin:0px;
+    padding:0px;
     
     text-shadow:
         3px 3px 0px #002937,
@@ -333,28 +334,66 @@ main {
 }
 
 
-.navbar-container p {
+/* .navbar-container p {
     display: table-cell;
     height: 46px;
     vertical-align: middle;
     padding: 0 10rem;
     color: black;
+  } */
+
+.fix-container {
+    text-align: center;
+    margin: auto;
+    width: 1200px;
+}
+
+.left {
+
+    float: left;
+    vertical-align: middle;
+    margin: 15px 5rem;
+    color: black;
+  }
+
+.right {
+
+    float: right;
+    vertical-align: middle;
+    margin: 8px 5rem;
+    color: black;
   }
   
 
-.navbar-container p a {
+.navbar-container a {
   outline: none;
   text-decoration: none;
     color: black;
 
   }
 
-.navbar-nav {
-    vertical-align: middle;
-}
+.search {
+  background-color: transparent;
+  border: 1px solid #c0c0c0;
+  border-radius: 10px;
+  color: rgb(0, 0, 0);
+  font-family: inherit;
+  font-size: 16px;
+  padding: 5px 1rem;
+  
+    }
+  
+.search:focus {
+      outline: none;
+  }
+
+
+
 .page-content {
   padding-bottom: 20px;
 }
+
+
 .footer {
   width: 100%;
   height: 46px;
@@ -366,11 +405,6 @@ main {
     color: #fff;
 }
 
-.post-list-container {
-  li a.active {
-    font-weight: bold;
-  }
-}
 *[id]:before {
   /* display: block; */
   content: " ";
