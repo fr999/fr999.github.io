@@ -31,7 +31,7 @@ function showMovies(movies) {
     // clear main
     main.innerHTML = "";
 
-        const { backdrop, title, version, overview, images } = movies;
+        const { backdrop, title, version, overview, images, creator , url_creator, url_file, url_translate} = movies;
 
         const movieEl = document.createElement("div");
         movieEl.classList.add("dialog");
@@ -56,9 +56,9 @@ function showMovies(movies) {
             </div>
             <div class="spacer"></div>
             <div class="dialog-button">
-            <p><button>Auteur: <span>Hover</span></button></p>
-            <p><button>Jeux: <span>F95</span></button></p>
-            <p><button>Traduction: <span>F95</span></button></p>
+            <p><a href="${url_creator}" target="_blank" class="button">Auteur: <span>${creator}</span></a></p>
+            <p><a href="${url_file}" target="_blank" class="button">Game: <span>F95zone</span></a></p>
+            <p><a href="${url_translate}" target="_blank" class="button">Tradution: <span>F95zone</span></a></p>
             </div>
         `;
 

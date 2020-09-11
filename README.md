@@ -1,12 +1,3 @@
-## modifier docs
+## Site
 
-http://vstream.ga/docs/page/
-
-
-## Jekyll Doc Theme
-
-Go to [the website](https://aksakalli.github.io/jekyll-doc-theme/) for detailed information and demo.
-
-## License
-
-Released under [the MIT license](LICENSE).
+Go to [the website](https://lordvenom.github.io/f999/) for detailed information and demo.

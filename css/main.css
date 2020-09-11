@@ -196,7 +196,6 @@ main {
 
 
 .dialog-button {
-
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -204,7 +203,7 @@ main {
   letter-spacing: 0.5px;
 }
 
-.dialog-button button {
+.dialog-button .button {
   background-color: #22254b;
   color: white;
   border-radius: 3px;
@@ -216,13 +215,13 @@ main {
   box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
 }
 
-.dialog-button button span {
+.dialog-button .button span {
   color: orange;
   font-size: 1rem;
 }
 
 
-.dialog-button button:hover {
+.dialog-button .button:hover {
   opacity: 0.5;
 }
 
