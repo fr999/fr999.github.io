@@ -169,7 +169,7 @@ main {
   color: rgb(39, 189, 39);
 }
 
-.dialog-info span.orange {
+.orange {
   color: #EE6C4D;
 }
 
@@ -177,11 +177,14 @@ main {
   color: rgb(189, 42, 42);
 }
 
-.dialog-overview {
+.float-left {
   float:left;
   text-align: left;
+  overflow: auto;
   width: 40%;
   padding: 0.5rem 1rem 1rem;
+}
+.dialog-overview {
   max-height: 100%;
   font-size: 1.2rem;
   overflow: auto;
@@ -189,6 +192,26 @@ main {
   bottom: 0;
   right: 0;
 }
+
+.dialog-desc{
+  text-align: left;
+  
+
+}
+
+.dialog-desc ul{
+  list-style-type: none;
+  padding:0px;
+
+
+}
+
+.dialog-desc ul li {
+  margin: 0.5rem;
+
+}
+
+
 
 .dialog-image {
 
@@ -209,6 +232,7 @@ main {
   border-radius: 3px;
   box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
   transition: all .2s ease;
+  cursor: pointer;
 }
 
 .dialog-image img:hover {
@@ -430,5 +454,22 @@ main {
     border: 1px solid #dddddd;
     box-shadow:none;
     -webkit-box-shadow: none;
+}
+
+.hidden {
+    display: none;
+}
+
+.dialog-more:hover{
+  cursor: pointer;
+}
+.dialog-desc textarea {
+  height:100px;
+  width:100%;
+  background-color: #293241;
+  color:white;
+  border:none;
+  resize: none;
+  padding:1rem;
 }
 

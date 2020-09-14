@@ -24,7 +24,7 @@ function showMovies(movies) {
     // clear main
     main.innerHTML = "";
 
-        const { backdrop, title, version, overview, images, creator , url_creator, url_file, url_translate} = movies;
+        const { backdrop, title, version, overview, images, creator , url_creator, url_file, url_translate, creator_translate, version_translate, type_translate, info_translate} = movies;
 
         const movieEl = document.createElement("div");
         movieEl.classList.add("dialog");
@@ -38,14 +38,24 @@ function showMovies(movies) {
                 <h3>${title}</h3>
                 <span class="orange">${version}</span>
             </div>
-            <div class="dialog-overview">
+
+            <div class="dialog-overview float-left">
             ${overview}
+            <div class="dialog-desc"><ul>
+            <li>- Traduction par: <span class="orange">${creator_translate}</span></li>
+            <li>- Version: <span class="orange">${version_translate}</span></li>
+            <li>- Type: <span class="orange">${type_translate}</span></li>
+            <li><span class="dialog-more"><span class="orange">+ Info</span></li>
+            <li><textarea class="hidden">${info_translate}</textarea></li>
+            </ul></div>
             </div>
+        
+ 
             <div class="dialog-image">
-            <a href="javascript:void(0)"><img onclick="getLight(this.src)" src="${images[0]}"></a>
-            <a href="javascript:void(0)"><img onclick="getLight(this.src)" src="${images[1]}"></a>
-            <a href="javascript:void(0)"><img onclick="getLight(this.src)" src="${images[2]}"></a>
-            <a href="javascript:void(0)"><img onclick="getLight(this.src)" src="${images[3]}"></a>
+            <img src="${images[0]}">
+            <img src="${images[1]}">
+            <img src="${images[2]}">
+            <img src="${images[3]}">
             </div>
             <div class="spacer"></div>
             <div class="dialog-button">
@@ -55,8 +65,21 @@ function showMovies(movies) {
             </div>
         `;
 
+        const imglight = movieEl.querySelector(".dialog-image");
+        const moreEl = movieEl.querySelector(".dialog-more");
+        const textArea = movieEl.querySelector("textarea");
+
+        imglight.addEventListener("click", (e) => {
+            getLight(e.target.src)
+        });
+    
+        moreEl.addEventListener("click", () => {
+            textArea.classList.toggle("hidden");
+        });
+
         main.appendChild(movieEl);
 }
+
 
 
 function getLight(imag) {
