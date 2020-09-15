@@ -30,7 +30,7 @@ function showMovies(movies) {
         movieEl.classList.add("dialog");
 
         movieEl.innerHTML = `
-            <img
+            <img class="imgheader"
                 src="${backdrop}"
                 alt="${title}"
             />
@@ -87,8 +87,7 @@ function getLight(imag) {
 
     light.style.display = "block";
 
-    const imgEl = document.createElement("div");
-    light.innerHTML = `<img src="${imag}" /> `
+    light.innerHTML = `<div class="light"><img src="${imag}" /></div>`
     light.addEventListener("click", getClose);
 
 }

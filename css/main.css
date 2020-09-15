@@ -57,16 +57,17 @@ main {
 }
 
 .movie img {
-  width: 100%;
-  max-height: 150px;
-  height:150px;
+  width: 585px;
+  height: 150px;
   transition: all .2s ease;
+  object-fit: cover;
+  object-position: center;
+  backface-visibility: hidden;
 }
 
 .movie:hover img {
   opacity: 0.5;
   transform: scale(1.02);
-
 }
 
 .movie-info {
@@ -138,10 +139,13 @@ main {
   width: 1200px;
 }
 
-.dialog img {
+.dialog .imgheader {
   width: 100%;
-  max-height: 300px;
+  height: 300px;
   margin-bottom: 1rem;
+  object-fit: cover;
+  object-position: center center;
+  
 }
 
 .dialog-info {
@@ -226,13 +230,15 @@ main {
 }
 
 .dialog-image img {
-  max-height: 200px;
+  height: 146px;
   margin: 1rem;
-  width: 250px;
+  width: 260px;
   border-radius: 3px;
   box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
   transition: all .2s ease;
   cursor: pointer;
+  object-fit: cover;
+  object-position: center center;
 }
 
 .dialog-image img:hover {
@@ -282,19 +288,30 @@ main {
 	position: fixed;
 	z-index: 999;
 	width: 100%;
-	height: 100%;
-	text-align: center;
+  height: 100%;
+  padding: 0;
+  margin: 0;
 	top: 0;
 	left: 0;
-	background: rgba(0,0,0,0.8);
+
+}
+
+#lightbox div{
+  background: rgba(0,0,0,0.8);
+  width:100%;
+  height:100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #lightbox img {
-	/** Pad the lightbox image */
-	max-width: 90%;
-	max-height: 80%;
-  margin-top: 2%;
+  /** Pad the lightbox image */
+  width:80%;
+  max-height:80%;
   border-radius: 10px;
+  object-fit: cover;
+  object-position: center center;
 }
 
 
