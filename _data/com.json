@@ -165,7 +165,7 @@
 
       {
         "adult": false,
-        "overview": " Marchez dans la peau d'un protagoniste anonyme qui a eu un accident et a signé un pacte avec le diable pour devenir un esprit puissant, capable de posséder divers PNJ et de se renforcer lentement. Cela rend le Betrayed unique car vous ne contrôlez pas qu'un seul personnage, mais bien d'autres au cours de votre voyage.",
+        "overview": "Marchez dans la peau d'un protagoniste anonyme qui a eu un accident et a signé un pacte avec le diable pour devenir un esprit puissant, capable de posséder divers PNJ et de se renforcer lentement. Cela rend le Betrayed unique car vous ne contrôlez pas qu'un seul personnage, mais bien d'autres au cours de votre voyage.",
         "release_date": "2016-08-03",
         "images": [
           "https://attachments.f95zone.to/2018/12/203606_155342_136957_06.jpg",
@@ -177,15 +177,15 @@
         "id": 7,
         "original_language": "en",
         "title": "Betrayed",
-        "version": "0.62",
+        "version": "0.66",
         "backdrop": "https://attachments.f95zone.to/2019/07/368965_Betrayed.jpg",
         "vote_count": 1466,
         "url_file": "https://f95zone.to/threads/betrayed-v0-62-joraell.17512/",
-        "url_translate": "https://f95zone.to/threads/betrayed-v0-61-v0-62-french-translation.56752/",
+        "url_translate": "https://f95zone.to/threads/betrayed-v0-61-v0-66-french-translation.56752/#post-4210541",
         "url_creator": "https://www.patreon.com/joraell",
         "creator":"Joraell",
         "creator_translate" : "a_furbyz",
-        "version_translate" : "0.2",
+        "version_translate" : "0.4",
         "type_translate" : "Google",
         "info_translate" : "Les astuce ne sont pas traduite."
       },
