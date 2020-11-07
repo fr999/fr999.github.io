@@ -401,6 +401,32 @@
         "version_translate" : "0.1",
         "type_translate" : "Deepl",
         "info_translate" : "Astuce et images en jeux traduits aussi."
+      },
+      {
+        "adult": false,
+        "overview": "L'histoire se déroule autour de votre personnage, qui a été envoyé chez sa mère. La ville que vous avez connue auparavant est comme différente - tant de choses ont changé. Surtout, après une seule erreur, vous avez perdu la confiance de vos frères et sœurs. Pas d'argent, pas d'amour, seulement votre nouvelle caméra et votre désir de tout changer...",
+        "release_date": "2020-07-11",
+        "images": [
+          "https://attachments.f95zone.to/2020/07/745841_alice_gym_challenge_win_1-10.png",
+          "https://attachments.f95zone.to/2020/07/745842_bob_talk_additional_5.png",
+          "https://attachments.f95zone.to/2020/07/745855_monica_bl_gift_2.png",
+          "https://attachments.f95zone.to/2020/07/745856_rach_ask_mc_photo_2-2.png",
+          "https://attachments.f95zone.to/2020/07/745857_rach_ev_twister_2-1.png"
+        ],
+        "id": 16,
+        "original_language": "en",
+        "title": "Photo Hunt",
+        "version": "0.10.1a",
+        "backdrop": "https://attachments.f95zone.to/2019/10/440908_440669_f95_banner_4.png",
+        "vote_count": 1466,
+        "url_file": "https://f95zone.to/threads/photo-hunt-v0-10-1a-moochie.25264/",
+        "url_translate": "https://www.clictune.com/9aCs",
+        "url_creator": "https://www.patreon.com/mooch1e",
+        "creator":"Moochie",
+        "creator_translate" : "a_furbyz",
+        "version_translate" : "0.1",
+        "type_translate" : "Deepl",
+        "info_translate" : "Cheats inclus, Astuce en jeux traduits."
       }
 
 
