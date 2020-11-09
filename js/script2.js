@@ -61,7 +61,7 @@ function showMovies(movies) {
             <div class="dialog-button">
             <p><a href="${url_creator}" target="_blank" class="button">Auteur: <span>${creator}</span></a></p>
             <p><a href="${url_file}" target="_blank" class="button">Game: <span>F95zone</span></a></p>
-            <p><a href="${url_translate}" target="_blank" class="button">Tradution: <span>Zippy</span></a></p>
+            <p><a href="${url_translate}" target="_blank" class="button">Traduction: <span>Zippy</span></a></p>
             </div>
         `;
 
