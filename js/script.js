@@ -3,8 +3,11 @@ const APIURL = "https://raw.githubusercontent.com/LordVenom/f999/main/_data/com.
 
 
 const main = document.getElementById("main");
-const form = document.getElementById("form");
+const form = document.getElementById("search-input");
 const search = document.getElementById("search");
+
+const sliderHM = document.getElementById("slider");
+const sliderHMIMG = document.getElementById("slider_img");
 
 
 // initially get fav movies
@@ -15,6 +18,9 @@ async function getMovies(url, search) {
     const respData = await resp.json();
     var result = respData.results;
 
+    showSlider(result)
+    
+
     if (search) {
         result = [respData.results.find(el => el.title === search)];  
     }
@@ -22,6 +28,49 @@ async function getMovies(url, search) {
     showMovies(result);
 }
 
+
+function showSlider(sliders) {
+    // clear main
+    var timer = 0;
+    var count = 0;
+    var max_count = sliders.length;
+    // console.log(max_count)
+
+    sliders.forEach((slider) => {
+        const { backdrop } = slider;
+
+        sliderHMIMG.style.filter = "blur(0px)";
+        sliderHMIMG.src = backdrop;
+        setTimeout(function() {
+            // sliderHMIMG.classList.remove("in_blur");
+            // sliderHMIMG.classList.add("out_blur");
+            sliderHMIMG.style.filter = "blur(80px)";
+        }, (8000)); 
+        
+
+        setTimeout(function() {
+            count++;
+
+            // document.getElementById("myImg").style.filter = "blur(80px)";
+            sliderHMIMG.style.filter = "blur(0px)";
+
+            sliderHMIMG.src = backdrop;
+            
+
+            setTimeout(function() {
+                sliderHMIMG.style.filter = "blur(80px)";
+            }, (8000)); 
+            
+            if(count >= max_count) {
+                showSlider(sliders)
+              }
+
+        }, timer += 10000);
+
+        // console.log(backdrop)
+
+    });
+}
 
 function showMovies(movies) {
     // clear main
@@ -59,5 +108,3 @@ form.addEventListener("submit", (e) => {
         search.value = "";
     }
 });
-
-

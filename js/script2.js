@@ -4,6 +4,10 @@ const APIURL = "https://raw.githubusercontent.com/LordVenom/f999/main/_data/com.
 
 const main = document.getElementById("main");
 
+const header = document.getElementById("header-container");
+const sliderHMIMG = document.getElementById("slider_img");
+
+
 //var url_string = "http://www.example.com/t.html?a=1&b=3&c=m2-m3-m4-m5"; //window.location.href
 
 var c = new URLSearchParams(window.location.search).get("id");
@@ -26,56 +30,80 @@ function showMovies(movies) {
 
         const { backdrop, title, version, overview, images, creator , url_creator, url_file, url_translate, creator_translate, version_translate, type_translate, info_translate} = movies;
 
-        const movieEl = document.createElement("div");
-        movieEl.classList.add("dialog");
 
-        movieEl.innerHTML = `
-            <img class="imgheader"
-                src="${backdrop}"
-                alt="${title}"
-            />
-            <div class="dialog-info">
-                <h3>${title}</h3>
-                <span class="orange">${version}</span>
-            </div>
+        sliderHMIMG.src = backdrop;
 
-            <div class="dialog-overview float-left">
-            ${overview}
-            <div class="dialog-desc"><ul>
-            <li>- Traduction par: <span class="orange">${creator_translate}</span></li>
-            <li>- Version: <span class="orange">${version_translate}</span></li>
-            <li>- Type: <span class="orange">${type_translate}</span></li>
-            <li><span class="dialog-more"><span class="orange">+ Info</span></li>
-            <li><textarea class="hidden">${info_translate}</textarea></li>
-            </ul></div>
-            </div>
-        
- 
-            <div class="dialog-image">
+        header.getElementsByTagName('h1')[0].innerHTML = `${title}`;
+        header.getElementsByTagName('p')[0].innerHTML = `[ Version ${version} ]`;
+
+        const movieEl1 = document.createElement("div");
+        movieEl1.classList.add("dialog");
+
+        movieEl1.innerHTML += `
+        <div class="dialog-desc"><ul>
+        <li><span>Jeux:</span></li>
+        <li><p>${overview}</p></li>
+        <li><span>Version: <div class="blue">${version}</span></li>
+        <li><span>Auteur: <div class="blue"><a href="${url_creator}" target="_blank">${creator}</a></div></span></li>
+        </div>
+
+
+        <div class="button"><a href="${url_file}" target="_blank">Téléchargement: <span>F95zone</span></a></div>
+        `
+        main.appendChild(movieEl1);
+
+        //img
+        const movieEl2 = document.createElement("div");
+        movieEl2.classList.add("dialog");
+
+        movieEl2.innerHTML += `
+        <div class="dialog-image">
             <img src="${images[0]}">
             <img src="${images[1]}">
-            <img src="${images[2]}">
-            <img src="${images[3]}">
-            </div>
-            <div class="spacer"></div>
-            <div class="dialog-button">
-            <p><a href="${url_creator}" target="_blank" class="button">Auteur: <span>${creator}</span></a></p>
-            <p><a href="${url_file}" target="_blank" class="button">Game: <span>F95zone</span></a></p>
-            <p><a href="${url_translate}" target="_blank" class="button">Traduction: <span>Zippy</span></a></p>
-            </div>
-        `;
+            </div>`
 
-        const imglight = movieEl.querySelector(".dialog-image");
-        const moreEl = movieEl.querySelector(".dialog-more");
-        const textArea = movieEl.querySelector("textarea");
+        const imglight = movieEl2.querySelector(".dialog-image");
 
         imglight.addEventListener("click", (e) => {
             getLight(e.target.src)
         });
-    
-        moreEl.addEventListener("click", () => {
-            textArea.classList.toggle("hidden");
+        main.appendChild(movieEl2);
+
+        //img2
+        const movieEl3 = document.createElement("div");
+        movieEl3.classList.add("dialog");
+
+        movieEl3.innerHTML += `
+        <div class="dialog-image">
+            <img src="${images[2]}">
+            <img src="${images[3]}">
+            </div>`
+
+        const imglight2 = movieEl3.querySelector(".dialog-image");
+
+        imglight2.addEventListener("click", (e) => {
+            getLight(e.target.src)
         });
+        main.appendChild(movieEl3);
+
+        //
+        const movieEl = document.createElement("div");
+        movieEl.classList.add("dialog");
+
+        movieEl.innerHTML = `
+            <div class="dialog-desc"><ul>
+            <li><span>Traduction:</span></li>
+            <li><p>${info_translate}</p></li>
+            <li><span>Version: <div class="blue">${version_translate}</span></li>
+            <li><span>Auteur: <div class="blue">${creator_translate}</div></span></li>
+            <li><span>Type: <div class="blue">${type_translate}</span></li>
+            <li><span>Lien sponso: <div class="blue">Oui</span></li>
+            </ul></div>
+        
+            <div class="button"><a href="${url_translate}" target="_blank">Téléchargement: <span>Zippy</span></a></div>
+            `;
+
+
 
         main.appendChild(movieEl);
 }
