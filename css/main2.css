@@ -85,16 +85,24 @@ body {
   color: rgb(115, 115, 115);
 }
 
-.options li:hover {
+.options a {
+  height:100%;
+  width: 100%;
+  display: inline-block;
+}
+
+.options li:hover, .options li a:hover {
   color:  rgba(66, 183, 245,0.8);
   border-bottom-color:   rgba(66, 183, 245,0.8);
   border-bottom-width: 2px;
+
 }
 
 .active {
   color:   rgba(66, 183, 245,0.8);
   border-bottom: solid 2px  rgba(66, 183, 245,0.8);
 }
+
 
 
 #search-input {
