@@ -47,6 +47,16 @@ main {
   padding-bottom:1rem;
 }
 
+main2 {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  margin: auto;
+  width: 1230px;
+  padding-top:1rem;
+  padding-bottom:1rem;
+}
+
 .movie {
   background-color: #3D5A80;
   border-radius: 3px;
