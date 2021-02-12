@@ -25,7 +25,8 @@
         "creator_translate" : "a_furbyz",
         "version_translate" : "0.2",
         "type_translate" : "Google",
-        "info_translate" : ""
+        "info_translate" : "",
+        "threads_translate": "https://f95zone.to/threads/dreamofdesire-french-translation.56180/"
       },
 
       {
@@ -52,7 +53,8 @@
         "creator_translate" : "a_furbyz",
         "version_translate" : "0.3",
         "type_translate" : "Google",
-        "info_translate" : ""
+        "info_translate" : "",
+        "threads_translate": "https://f95zone.to/threads/the-awakening-v0-3-4c-french-translation.56181/"
       },
 
       {
@@ -79,7 +81,8 @@
         "creator_translate" : "a_furbyz",
         "version_translate" : "0.1",
         "type_translate" : "Google",
-        "info_translate" : "Seul les textes en jeux sont traduits puisque les menus sont des images."
+        "info_translate" : "Seul les textes en jeux sont traduits puisque les menus sont des images.",
+        "threads_translate": "https://f95zone.to/threads/forgotten-paradise-1-0-french-translation.56383/"
       },
 
       {
@@ -106,7 +109,8 @@
         "creator_translate" : "a_furbyz",
         "version_translate" : "0.1",
         "type_translate" : "Google",
-        "info_translate" : ""
+        "info_translate" : "",
+        "threads_translate": "https://f95zone.to/threads/second-chance-1-0-french-translation.56491/"
       },
 
       {
@@ -133,7 +137,8 @@
         "creator_translate" : "a_furbyz",
         "version_translate" : "0.1",
         "type_translate" : "Google",
-        "info_translate" : ""
+        "info_translate" : "",
+        "threads_translate": "https://f95zone.to/threads/the-intoxicating-flavor-v0-5-4-french-translation.56641/"
       },
 
       {
@@ -160,7 +165,8 @@
         "creator_translate" : "a_furbyz",
         "version_translate" : "0.5",
         "type_translate" : "Google",
-        "info_translate" : "Les astuce ne sont pas traduite."
+        "info_translate" : "Les astuce ne sont pas traduite.",
+        "threads_translate": "https://f95zone.to/threads/betrayed-v0-80-french-translation.56752/"
       },
 
       {
@@ -187,7 +193,8 @@
         "creator_translate" : "a_furbyz",
         "version_translate" : "0.3",
         "type_translate" : "Google",
-        "info_translate" : ""
+        "info_translate" : "",
+        "threads_translate": "https://f95zone.to/threads/become-a-rock-star-v0-70-french-translatation.56891/"
       },
 
       {
@@ -214,7 +221,8 @@
         "creator_translate" : "a_furbyz",
         "version_translate" : "0.2",
         "type_translate" : "Google",
-        "info_translate" : "Impossible de traduire Dad, Mom, Aunt"
+        "info_translate" : "Impossible de traduire Dad, Mom, Aunt",
+        "threads_translate": "https://f95zone.to/threads/seducing-the-devil-v0-9-french-translation.57935/"
       },
 
       {
@@ -241,7 +249,8 @@
         "creator_translate" : "a_furbyz",
         "version_translate" : "0.1",
         "type_translate" : "Google",
-        "info_translate" : "Traduction des images pour les choix."
+        "info_translate" : "Traduction des images pour les choix.",
+        "threads_translate": "https://f95zone.to/threads/dirty-pool-1-1-french-translation.59343/"
       },
 
       {
@@ -268,7 +277,8 @@
         "creator_translate" : "a_furbyz",
         "version_translate" : "0.3",
         "type_translate" : "Google",
-        "info_translate" : ""
+        "info_translate" : "",
+        "threads_translate": "https://f95zone.to/threads/s-h-e-l-t-e-r-v0-25-french-translation.60181/"
       },
 
       {
@@ -295,7 +305,8 @@
         "creator_translate" : "a_furbyz",
         "version_translate" : "0.1",
         "type_translate" : "Google",
-        "info_translate" : ""
+        "info_translate" : "",
+        "threads_translate": "https://f95zone.to/threads/dark-neighborhood-v1-0-french-translation.60666/"
       },
       {
         "adult": false,
@@ -321,7 +332,8 @@
         "creator_translate" : "a_furbyz",
         "version_translate" : "0.1",
         "type_translate" : "Google",
-        "info_translate" : ""
+        "info_translate" : "",
+        "threads_translate": "https://f95zone.to/threads/ring-of-lust-v0-2-3a-french-translation.61835/"
       },
       {
         "adult": false,
@@ -347,7 +359,8 @@
         "creator_translate" : "a_furbyz",
         "version_translate" : "0.1",
         "type_translate" : "Google",
-        "info_translate" : "Traduction compliqué, il peux y avoir du texte non traduit."
+        "info_translate" : "Traduction compliqué, il peux y avoir du texte non traduit.",
+        "threads_translate": "https://f95zone.to/threads/harem-hotel-0-10-2-french-translation.61960/"
       },
       {
         "adult": false,
@@ -373,7 +386,8 @@
         "creator_translate" : "a_furbyz",
         "version_translate" : "0.1",
         "type_translate" : "Deepl",
-        "info_translate" : "Astuce et images en jeux traduits aussi."
+        "info_translate" : "Astuce et images en jeux traduits aussi.",
+        "threads_translate": "https://f95zone.to/threads/annies-school-days-v0-7-french-translation.62470/"
       },
       {
         "adult": false,
@@ -389,17 +403,18 @@
         "id": 16,
         "original_language": "en",
         "title": "Photo Hunt",
-        "version": "0.10.1a",
+        "version": "0.10.3a",
         "backdrop": "https://attachments.f95zone.to/2019/10/440908_440669_f95_banner_4.png",
         "vote_count": 1466,
-        "url_file": "https://f95zone.to/threads/photo-hunt-v0-10-1a-moochie.25264/",
-        "url_translate": "https://www.clictune.com/9aCs",
+        "url_file": "https://f95zone.to/threads/photo-hunt-v0-10-3a-moochie.25264/",
+        "url_translate": "https://www.clictune.com/a89e",
         "url_creator": "https://www.patreon.com/mooch1e",
         "creator":"Moochie",
         "creator_translate" : "a_furbyz",
-        "version_translate" : "0.1",
+        "version_translate" : "0.2",
         "type_translate" : "Deepl",
-        "info_translate" : "Cheats inclus, Astuce en jeux traduits."
+        "info_translate" : "Fonts modifier, Cheats inclus, Astuce en jeux traduits.",
+        "threads_translate": "https://f95zone.to/threads/photo-hunt-v0-10-1a-french-translation.67319/"
       },
       {
         "adult": false,
@@ -425,7 +440,8 @@
         "creator_translate" : "a_furbyz",
         "version_translate" : "0.1",
         "type_translate" : "Deepl",
-        "info_translate" : "Astuce en jeux traduits."
+        "info_translate" : "Astuce en jeux traduits.",
+        "threads_translate": "https://f95zone.to/threads/maxs-life-ch-1-ch-2-ch-3-french-translation.74090/"
       },
       {
         "adult": false,
@@ -451,7 +467,8 @@
         "creator_translate" : "a_furbyz",
         "version_translate" : "0.1",
         "type_translate" : "Deepl",
-        "info_translate" : "Astuce en jeux traduits."
+        "info_translate" : "Astuce en jeux traduits.",
+        "threads_translate": "https://f95zone.to/threads/maxs-life-ch-1-ch-2-ch-3-french-translation.74090/"
       },
       {
         "adult": false,
@@ -477,7 +494,8 @@
         "creator_translate" : "a_furbyz",
         "version_translate" : "0.1",
         "type_translate" : "Deepl",
-        "info_translate" : "Astuce en jeux traduits."
+        "info_translate" : "Astuce en jeux traduits.",
+        "threads_translate": "https://f95zone.to/threads/maxs-life-ch-1-ch-2-ch-3-french-translation.74090/"
       },
       {
         "adult": false,
@@ -503,7 +521,8 @@
         "creator_translate" : "a_furbyz",
         "version_translate" : "0.1",
         "type_translate" : "Deepl",
-        "info_translate" : ""
+        "info_translate" : "",
+        "threads_translate": "https://f95zone.to/threads/fetishlocator-week1-week2-french-translation.69496/"
       },
       {
         "adult": false,
@@ -529,7 +548,8 @@
         "creator_translate" : "a_furbyz",
         "version_translate" : "0.1",
         "type_translate" : "Deepl",
-        "info_translate" : ""
+        "info_translate" : "",
+        "threads_translate": "https://f95zone.to/threads/fetishlocator-week1-week2-french-translation.69496/"
       },
       {
         "adult": false,
@@ -555,7 +575,8 @@
         "creator_translate" : "a_furbyz",
         "version_translate" : "0.1",
         "type_translate" : "Deepl",
-        "info_translate" : "Path incest inclus"
+        "info_translate" : "Path incest inclus",
+        "threads_translate": "https://f95zone.to/threads/mysistermyroommate-v1-69-french-translation.71842/"
       }
 
 

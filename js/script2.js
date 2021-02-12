@@ -28,7 +28,7 @@ function showMovies(movies) {
     // clear main
     main.innerHTML = "";
 
-        const { backdrop, title, version, overview, images, creator , url_creator, url_file, url_translate, creator_translate, version_translate, type_translate, info_translate} = movies;
+        const { backdrop, title, version, overview, images, creator , url_creator, url_file, url_translate, creator_translate, version_translate, type_translate, info_translate, threads_translate} = movies;
 
 
         sliderHMIMG.src = backdrop;
@@ -101,6 +101,7 @@ function showMovies(movies) {
             </ul></div>
         
             <div class="button"><a href="${url_translate}" target="_blank">Téléchargement: <span>Zippy</span></a></div>
+            <div class="button"><a href="${threads_translate}" target="_blank">Discussion: <span>F95ZONE</span></a></div>
             `;
 
 
