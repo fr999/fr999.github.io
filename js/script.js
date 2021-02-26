@@ -3,7 +3,7 @@ const APIURL = "https://raw.githubusercontent.com/LordVenom/f999/main/_data/com.
 
 
 const main = document.getElementById("main");
-const form = document.getElementById("search-input");
+const form = document.getElementById("search_form");
 const search = document.getElementById("search");
 
 const sliderHM = document.getElementById("slider");
@@ -13,7 +13,8 @@ const sliderHMIMG = document.getElementById("slider_img");
 // initially get fav movies
 getMovies(APIURL, "");
 
-async function getMovies(url, search) {
+async function getMovies(url, searchTerm) {
+
     const resp = await fetch(url);
     const respData = await resp.json();
     var result = respData.results;
@@ -21,8 +22,14 @@ async function getMovies(url, search) {
     showSlider(result)
     
 
-    if (search) {
-        result = [respData.results.find(el => el.title === search)];  
+    if (searchTerm) {
+        //console.log(searchTerm)
+        //result = [respData.results.find(el => el.title === searchTerm)];
+        //result = respData.results.filter(el => el.title === searchTerm);
+        //result = respData.results.filter(el=>el.title.indexOf(searchTerm) !== -1);
+
+        result = respData.results.filter(el => el.title.toLowerCase().includes(searchTerm.toLowerCase()))
+
     }
 
     showMovies(result);

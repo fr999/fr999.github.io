@@ -104,40 +104,75 @@ body {
 }
 
 
+/*/search/*/
 
-#search-input {
-  flex: 1;
-  display: flex;
+/* Change autocomplete styles in WebKit */
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0px 1000px rgb(245, 245, 245) inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+form {
+  display: inline-flex;
   align-items: center;
+  flex-grow: 0;
+  max-width: 250px;
+  width: 100%;
+  pointer-events: all;
   position: relative;
+
 }
 
 #search {
+  position: absolute;
+  top: -5px;
+    display: block;
     letter-spacing: 1px;
     width: 100%;
+    height: 25px;
     background: none;
     border: none;
-    border-bottom: solid 1px lightgray;
-    padding: 5px 20px 5px 10px;
-    color: gray;
+    padding: 0px 20px 5px 10px;
+    font-weight: 600;
+    font-size: .80em;
+    color: rgb(115, 115, 115);
+    font-size: 13px;
+    text-transform: uppercase;
     transition: border-bottom-color .3s;
+    font-family: 'Arvo', monospace;
 }
 
 #search:focus {
   outline: none;
-  border-bottom-width: 2px;
-  border-bottom-color:   rgba(66, 183, 245,0.8);
+  background: none;
+  border: none;
+  outline-width: 0;
 }
 
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  -webkit-appearance:none;
+}
+
+
 .fa-search {
-  color: lightgray;
+  color:  rgb(115, 115, 115);
   position: absolute;
   right: 0;
-  padding-right: 8px;
+  padding: 0px 0px 100px 10px;
   transform: rotate(90deg);
   -webkit-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
-  padding: 0;
 }
 
 
