@@ -21,14 +21,16 @@ async function getMovies(url) {
 
     const item = respData.results.find(item => item.id === parseInt(c));
 
-    showMovies(item);
+    const sponsoring = respData.sponso_genre
+
+    showMovies(item, sponsoring);
 }
 
-function showMovies(movies) {
+function showMovies(movies, sponsoring) {
     // clear main
     main.innerHTML = "";
 
-        const { backdrop, title, version, overview, images, creator , url_creator, url_file, url_translate, creator_translate, version_translate, type_translate, info_translate, threads_translate} = movies;
+        const { backdrop, sponso, title, version, overview, images, creator , url_creator, url_file, url_translate, creator_translate, version_translate, type_translate, info_translate, threads_translate} = movies;
 
 
         sliderHMIMG.src = backdrop;
@@ -97,7 +99,7 @@ function showMovies(movies) {
             <li><span>Version: <div class="blue">${version_translate}</span></li>
             <li><span>Auteur: <div class="blue">${creator_translate}</div></span></li>
             <li><span>Type: <div class="blue">${type_translate}</span></li>
-            <li><span>Lien sponso: <div class="blue">Oui</span></li>
+            <li><span>Lien sponso: <div class="blue">${sponsoring[0][sponso]}</span></li>
             </ul></div>
         
             <div class="button"><a href="${url_translate}" target="_blank">Téléchargement: <span>Zippy</span></a></div>
