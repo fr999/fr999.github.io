@@ -88,23 +88,15 @@ function ToCard(repos) {
     selectList.id = "mySelect";
     reposEl.appendChild(selectList);
 
-    console.log("ttt" +repos.length)
-
-    for (var i = 0; i < repos.length; i++) {
-        console.log(i);
-      }
-
     repos.forEach((repo) => {
 
-            const { value } = repo;
-
-   
+            const { id, name } = repo;
 
             const repoEl = document.createElement("option");
             repoEl.classList.add("repo");
 
-            repoEl.value = repo[0];
-            repoEl.text = repo[1];
+            repoEl.value = id;
+            repoEl.text = name;
 
             selectList.appendChild(repoEl);
         });
