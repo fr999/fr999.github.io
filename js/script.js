@@ -18,8 +18,10 @@ async function getMovies(url, searchTerm) {
     const resp = await fetch(url);
     const respData = await resp.json();
     var result = respData.results;
+    const category = respData.category_genre;
 
     showSlider(result)
+    ToCard(category)
     
 
     if (searchTerm) {
@@ -77,6 +79,35 @@ function showSlider(sliders) {
         // console.log(backdrop)
 
     });
+}
+
+function ToCard(repos) {
+    const reposEl = document.getElementById("repos");
+
+    var selectList = document.createElement("select");
+    selectList.id = "mySelect";
+    reposEl.appendChild(selectList);
+
+    console.log("ttt" +repos.length)
+
+    for (var i = 0; i < repos.length; i++) {
+        console.log(i);
+      }
+
+    repos.forEach((repo) => {
+
+            const { value } = repo;
+
+   
+
+            const repoEl = document.createElement("option");
+            repoEl.classList.add("repo");
+
+            repoEl.value = repo[0];
+            repoEl.text = repo[1];
+
+            selectList.appendChild(repoEl);
+        });
 }
 
 function showMovies(movies) {
