@@ -21,7 +21,7 @@ async function getMovies(url, searchTerm) {
     const category = respData.category_genre;
 
     showSlider(result)
-    ToCard(category)
+    //ToCard(category)
     
 
     if (searchTerm) {

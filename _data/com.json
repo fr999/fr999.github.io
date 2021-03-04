@@ -9,11 +9,20 @@
     ],
     "category_genre": [
       {
-        "0" : "2D Game",
-        "1" : "3D Game",
-        "2" : "Adventure",
-        "3" : "Animated"
-        
+        "id": 1,
+        "name": "2D Game"
+      },
+      {
+        "id": 2,
+        "name": "3D Game"
+      },
+      {
+        "id": 3,
+        "name": "Adventure"
+      },
+      {
+        "id": 4,
+        "name": "Animated"
       }
     ],
     "results": [
