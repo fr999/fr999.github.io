@@ -7,6 +7,15 @@
         
       }
     ],
+    "category_genre": [
+      {
+        "0" : "2D Game",
+        "1" : "3D Game",
+        "2" : "Adventure",
+        "3" : "Animated"
+        
+      }
+    ],
     "results": [
       {
         "adult": false,
