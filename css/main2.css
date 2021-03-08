@@ -104,6 +104,28 @@ body {
 }
 
 
+/*selecttt*/
+
+#filter_options{
+  list-style: none;
+  display: inline-block;
+}
+
+#filter_options li,
+#filter_options-type li{
+  float: left;
+  margin-left: 20px;
+  font-family: 'Poppins', sans-serif;
+  color: #737373;
+  padding: 0 5px;
+  letter-spacing: 0.5px;
+  font-size: 12px;
+}
+
+#product-list{
+  display: block;
+}
+
 /*/search/*/
 
 /* Change autocomplete styles in WebKit */
@@ -168,11 +190,19 @@ input[type="search"]::-webkit-search-results-decoration {
 .fa-search {
   color:  rgb(115, 115, 115);
   position: absolute;
-  right: 0;
+  right: 40;
   padding: 0px 0px 100px 10px;
   transform: rotate(90deg);
   -webkit-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
+}
+
+
+.fa-filter {
+  position: absolute;
+  color:  rgb(115, 115, 115);
+  right: 40;
+  padding: 0px 0px 100px 10px;
 }
 
 

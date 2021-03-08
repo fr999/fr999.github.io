@@ -102,7 +102,7 @@ function showMovies(movies, sponsoring) {
             <li><span>Lien sponso: <div class="blue">${sponsoring[0][sponso]}</span></li>
             </ul></div>
         
-            <div class="button"><a href="${url_translate}" target="_blank">Téléchargement: <span>Zippy</span></a></div>
+            <div class="button"><a href="${url_translate}" target="_blank">Téléchargement</a></div>
             <div class="button"><a href="${threads_translate}" target="_blank">Discussion: <span>F95ZONE</span></a></div>
             `;
 

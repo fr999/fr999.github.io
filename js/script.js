@@ -6,37 +6,55 @@ const main = document.getElementById("main");
 const form = document.getElementById("search_form");
 const search = document.getElementById("search");
 
+const selectHM = document.getElementById("filter_options");
+
+const filter_toogle = document.getElementById("filter_toogle");
+
+
+
 const sliderHM = document.getElementById("slider");
 const sliderHMIMG = document.getElementById("slider_img");
 
+//url arg
+const urlParams = new URLSearchParams(window.location.search);
+const seperator = ",";
+//const myParam = urlParams.get('q');
 
+//var c = url.searchParams.get("c");
+//url.URLSearchParams.has()
 // initially get fav movies
-getMovies(APIURL, "");
+getMovies(APIURL, "", "");
 
-async function getMovies(url, searchTerm) {
+
+async function getMovies(url, searchTerm, catTerm) {
 
     const resp = await fetch(url);
     const respData = await resp.json();
     var result = respData.results;
-    const category = respData.category_genre;
+    const rst_category = respData.category_genre;
 
+    //load slider et select
     showSlider(result)
-    //ToCard(category)
-    
+    ToCard(rst_category)
 
-    if (searchTerm) {
-        //console.log(searchTerm)
-        //result = [respData.results.find(el => el.title === searchTerm)];
-        //result = respData.results.filter(el => el.title === searchTerm);
-        //result = respData.results.filter(el=>el.title.indexOf(searchTerm) !== -1);
+    if (urlParams.has('q')) {
+        searchTerm = urlParams.get('q')
+        
+        const searchHM = document.getElementById("search");
+        search.value = searchTerm
 
         result = respData.results.filter(el => el.title.toLowerCase().includes(searchTerm.toLowerCase()))
+    }
 
+    if (urlParams.has('c')) {
+        catTerm = urlParams.get('c')
+
+        result = respData.results.filter(el => el.genre.toString().includes(catTerm))
+  
     }
 
     showMovies(result);
 }
-
 
 function showSlider(sliders) {
     // clear main
@@ -82,23 +100,75 @@ function showSlider(sliders) {
 }
 
 function ToCard(repos) {
-    const reposEl = document.getElementById("repos");
 
-    var selectList = document.createElement("select");
-    selectList.id = "mySelect";
-    reposEl.appendChild(selectList);
+    selectHM.addEventListener("change", e => {
+        
+        const current = urlParams.get('c');
+  
+
+        if (e.target.checked === false) {
+
+            const parts = current.split(seperator);
+            const index = parts.indexOf(e.target.value);
+            parts.splice(index, 1);
+
+            if(parts.length === 0) {
+                // if nothing is left delete the parameter
+                urlParams.delete('c');
+              }else{
+                // overwrite with the updated value
+                urlParams.set('c', parts.join(seperator));
+              }
+            
+        } else {
+
+            if (urlParams.has('c')) {
+                // get saved value
+                
+                // combine saved and new value
+                const extra = current + seperator + e.target.value;
+                // overwrite old value
+                urlParams.set('c', extra);
+              } else {
+                urlParams.append('c', e.target.value);
+              }
+        }
+        //getMovies(APIURL, "", "1");
+        //urlParams.append('c', e.target.value);
+        window.location.search = urlParams;
+
+    });
+
+
+    selectHM.innerText = null;
+    //category.appendChild(selectHM);
+
+    var search_ids = urlParams.getAll('c')
 
     repos.forEach((repo) => {
 
             const { id, name } = repo;
 
-            const repoEl = document.createElement("option");
+            const repoLI = document.createElement("li");
+            
+            const repoEl = document.createElement("input");
             repoEl.classList.add("repo");
 
+            repoEl.type = "checkbox";
             repoEl.value = id;
             repoEl.text = name;
+            repoEl.id = "id" + id;
 
-            selectList.appendChild(repoEl);
+            if(search_ids.toString().includes(''+id+'')){
+                repoEl.checked = true;
+            } else {
+                repoEl.checked = false;
+            }
+
+            repoLI.innerHTML = name;
+
+            repoLI.appendChild(repoEl)
+            selectHM.appendChild(repoLI);
         });
 }
 
@@ -133,8 +203,27 @@ form.addEventListener("submit", (e) => {
     const searchTerm = search.value;
 
     if (searchTerm) {
-        getMovies(APIURL, searchTerm);
+        //getMovies(APIURL, searchTerm);
+        urlParams.set('q', searchTerm);
+        window.location.search = urlParams;
 
         search.value = "";
     }
 });
+
+
+filter_toogle.addEventListener("click", function() {
+        
+    const filterHM = document.getElementById("filters-container");
+
+    if (filterHM.style.display !== 'none') {
+        filterHM.style.display = 'none';
+    }
+    else {
+        filterHM.style.display = 'block';
+    }
+
+});
+
+
+
