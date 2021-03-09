@@ -8,7 +8,7 @@ const search = document.getElementById("search");
 
 const selectHM = document.getElementById("filter_options");
 
-const filter_toogle = document.getElementById("filter_toogle");
+//const filter_toogle = document.getElementById("filter_toogle");
 
 
 
@@ -212,18 +212,18 @@ form.addEventListener("submit", (e) => {
 });
 
 
-filter_toogle.addEventListener("click", function() {
+// filter_toogle.addEventListener("click", function() {
         
-    const filterHM = document.getElementById("filters-container");
+//     const filterHM = document.getElementById("filters-container");
 
-    if (filterHM.style.display !== 'none') {
-        filterHM.style.display = 'none';
-    }
-    else {
-        filterHM.style.display = 'block';
-    }
+//     if (filterHM.style.display !== 'none') {
+//         filterHM.style.display = 'none';
+//     }
+//     else {
+//         filterHM.style.display = 'block';
+//     }
 
-});
+// });
 
 
 
