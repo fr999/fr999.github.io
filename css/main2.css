@@ -166,9 +166,8 @@ form {
     font-weight: 600;
     font-size: .80em;
     color: rgb(115, 115, 115);
-    font-size: 13px;
+    font-size: 11px;
     text-transform: uppercase;
-    transition: border-bottom-color .3s;
     font-family: 'Arvo', monospace;
 }
 

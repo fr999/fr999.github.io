@@ -10,7 +10,7 @@ const selectHM = document.getElementById("filter_options");
 
 //const filter_toogle = document.getElementById("filter_toogle");
 
-
+const filterHM = document.getElementById("filters-container");
 
 const sliderHM = document.getElementById("slider");
 const sliderHMIMG = document.getElementById("slider_img");
@@ -107,31 +107,10 @@ function ToCard(repos) {
   
 
         if (e.target.checked === false) {
-
-            const parts = current.split(seperator);
-            const index = parts.indexOf(e.target.value);
-            parts.splice(index, 1);
-
-            if(parts.length === 0) {
-                // if nothing is left delete the parameter
-                urlParams.delete('c');
-              }else{
-                // overwrite with the updated value
-                urlParams.set('c', parts.join(seperator));
-              }
-            
+                urlParams.delete('c');            
         } else {
+                urlParams.set('c', e.target.value);
 
-            if (urlParams.has('c')) {
-                // get saved value
-                
-                // combine saved and new value
-                const extra = current + seperator + e.target.value;
-                // overwrite old value
-                urlParams.set('c', extra);
-              } else {
-                urlParams.append('c', e.target.value);
-              }
         }
         //getMovies(APIURL, "", "1");
         //urlParams.append('c', e.target.value);
@@ -143,7 +122,7 @@ function ToCard(repos) {
     selectHM.innerText = null;
     //category.appendChild(selectHM);
 
-    var search_ids = urlParams.getAll('c')
+    var search_ids = urlParams.get('c')
 
     repos.forEach((repo) => {
 
@@ -159,11 +138,18 @@ function ToCard(repos) {
             repoEl.text = name;
             repoEl.id = "id" + id;
 
-            if(search_ids.toString().includes(''+id+'')){
+            if (search_ids == id) {
                 repoEl.checked = true;
+                filterHM.style.display = 'block'
             } else {
                 repoEl.checked = false;
             }
+
+            // if(search_ids.toString().includes(''+id+'')){
+            //     repoEl.checked = true;
+            // } else {
+            //     repoEl.checked = false;
+            // }
 
             repoLI.innerHTML = name;
 
@@ -212,18 +198,16 @@ form.addEventListener("submit", (e) => {
 });
 
 
-// filter_toogle.addEventListener("click", function() {
-        
-//     const filterHM = document.getElementById("filters-container");
+filter_toogle.addEventListener("click", function() {
 
-//     if (filterHM.style.display !== 'none') {
-//         filterHM.style.display = 'none';
-//     }
-//     else {
-//         filterHM.style.display = 'block';
-//     }
+    if (filterHM.style.display !== 'none') {
+        filterHM.style.display = 'none';
+    }
+    else {
+        filterHM.style.display = 'block';
+    }
 
-// });
+});
 
 
 
