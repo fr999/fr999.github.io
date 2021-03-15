@@ -21,16 +21,20 @@ async function getMovies(url) {
 
     const item = respData.results.find(item => item.id === parseInt(c));
 
-    const sponsoring = respData.sponso_genre
+    //const sponsoring = respData.sponso_genre
 
-    showMovies(item, sponsoring);
+    showMovies(item, respData);
 }
 
-function showMovies(movies, sponsoring) {
+function showMovies(movies, respData) {
     // clear main
     main.innerHTML = "";
 
-        const { backdrop, sponso, title, version, overview, images, creator , url_creator, url_file, url_translate, creator_translate, version_translate, type_translate, info_translate, threads_translate} = movies;
+        const { backdrop, sponso, title, genre, version, overview, images, creator , url_creator, url_file, url_translate, creator_translate, version_translate, type_translate, info_translate, threads_translate} = movies;
+
+        const sponsoring = respData.sponso_genre
+
+        const category_genre = respData.category_genre
 
 
         sliderHMIMG.src = backdrop;
