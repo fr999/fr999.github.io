@@ -30,7 +30,9 @@ body {
   #98C1D9 Light Crockery Blue B93
   #E0FBFC Cool Shadow BG10
   #EE6C4D Vermilion R08*/
-  background:  rgb(245, 245, 245);
+  /*background: #EE6C4D;*/
+  background: #f5f5f5;
+
   margin: 0;
   font-size: 13px;
   font-family: 'Arvo', monospace;
@@ -52,10 +54,11 @@ body {
   padding-bottom:1rem;
   transform: translateY(-55px);
   border-radius: 5px;
-  background-color: rgb(245, 245, 245);
-  box-shadow: 
+  background-color:  rgba(245, 245, 245, 0.8)
+  /*background-color:  rgba(10, 10, 10, 0.8)*/
+  /* plus utiliser box-shadow: 
               10px 55px 0px 0px #f5f4f4,
-              5px -5px 5px 0px rgba(0, 0, 0, 0.2);
+              5px -5px 5px 0px rgba(0, 0, 0, 0.2);*/
 
 }
 
@@ -218,7 +221,7 @@ main {
   margin: auto;
   padding-top:1rem;
   padding-bottom:1rem;
-  background-color: rgb(245, 245, 245);
+  /*background-color: rgb(245, 245, 245);*/
 
 }
 
