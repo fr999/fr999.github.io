@@ -7,6 +7,8 @@ const main = document.getElementById("main");
 const header = document.getElementById("header-container");
 const sliderHMIMG = document.getElementById("slider_img");
 
+const selectHM = document.getElementById("filter_options");
+
 
 //var url_string = "http://www.example.com/t.html?a=1&b=3&c=m2-m3-m4-m5"; //window.location.href
 
@@ -35,6 +37,24 @@ function showMovies(movies, respData) {
         const sponsoring = respData.sponso_genre
 
         const category_genre = respData.category_genre
+
+        //genre
+        //const repoDIV = document.createElement("ul");
+        //repoDIV.classList.add("filter_options");
+        let test = []
+        genre.forEach((gr) => {
+            //console.log(gr)
+            category_genre.find( function(item) { 
+                if (item.id == gr) {
+                    const repoLI = document.createElement("li");
+                    repoLI.innerHTML = item.name;
+                    selectHM.appendChild(repoLI); 
+                    //test.push(item.name)
+                }
+             } );
+        })
+
+        //main.appendChild(repoDIV);
 
 
         sliderHMIMG.src = backdrop;
