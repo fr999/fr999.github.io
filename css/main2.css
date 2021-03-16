@@ -5,6 +5,27 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins");
 
 
+#dot {
+  display: flex;
+}
+.left-dot {
+  left: 0;
+  top:0;
+}
+
+.right-dot {
+  padding-right: 20px;
+  top:0;
+}
+
+.left-dot li, .right-dot li {
+  height: 20px;
+  width: 20px;
+  margin: 5px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
 .table{
   background-color: rgba(0, 0, 0, 0.2);
   width: 1200px;
@@ -54,7 +75,7 @@ body {
   padding-bottom:1rem;
   transform: translateY(-55px);
   border-radius: 5px;
-  background-color:  rgba(245, 245, 245, 0.8)
+  background-color:  #F5F5F5
   /*background-color:  rgba(10, 10, 10, 0.8)*/
   /* plus utiliser box-shadow: 
               10px 55px 0px 0px #f5f4f4,

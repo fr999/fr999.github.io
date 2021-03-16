@@ -153,4 +153,13 @@ function getClose() {
     light.style.display = "none";
 }
 
+//cookie
+const cok = Cookies.get('container');
+
+if (cok) {
+    var bg = document.getElementsByClassName("container")
+    bg[0].style.backgroundColor = cok;
+    document.body.style.backgroundColor = cok;
+}
+
 

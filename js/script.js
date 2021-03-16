@@ -19,8 +19,14 @@ const sliderHMIMG = document.getElementById("slider_img");
 const urlParams = new URLSearchParams(window.location.search);
 const seperator = ",";
 //const myParam = urlParams.get('q');
-
 //var c = url.searchParams.get("c");
+//cookie
+const cok = Cookies.get('container');
+if (cok) {
+    var bg = document.getElementsByClassName("container")
+    bg[0].style.backgroundColor = cok;
+    document.body.style.backgroundColor = cok;
+}
 //url.URLSearchParams.has()
 // initially get fav movies
 getMovies(APIURL, "", "");
@@ -207,6 +213,26 @@ filter_toogle.addEventListener("click", function() {
         filterHM.style.display = 'block';
     }
 
+});
+
+
+let listRight = document.querySelectorAll('.right-dot li');
+
+listRight.forEach((item, index) => {
+  item.addEventListener('click', (event) => {
+    event.preventDefault();
+
+    const val = item.style.backgroundColor;
+    
+    var bg = document.getElementsByClassName("container")
+    bg[0].style.backgroundColor = val;
+
+    document.body.style.backgroundColor = val;
+
+    Cookies.set('container', val, { expires: 7 });
+
+   
+  });
 });
 
 
