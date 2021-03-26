@@ -157,7 +157,7 @@ function showMovies(movies, respData) {
             <img
                 src="${images[5]}"
                 alt="${title}"
-                class="book-card-img"
+                class="book-card-img-info"
             /></div></div></div>
         <div class="card-content">
         <div class="book-name">Traduction</div>
