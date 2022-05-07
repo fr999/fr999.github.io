@@ -1,5 +1,5 @@
 
-const APIURL = "https://raw.githubusercontent.com/LordVenom/f999/main/_data/com.json";
+const APIURL = "https://raw.githubusercontent.com/fr999/fr999.github.io/main/_data/com.json";
 
 
 const main = document.getElementById("main");
