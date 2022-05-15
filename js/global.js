@@ -31,7 +31,7 @@ function showNav(num) {
         navigation.innerHTML += `<a href="javascript:void(0)" id="${nextpage}" class="book-type">Suivant</a>`
         
         if (numPage == 0){
-             navigation.innerHTML += `<a href="javascript:void(0)" id="0" class="book-type active">1/ ${numberpage}</a>`
+             navigation.innerHTML += `<a href="javascript:void(0)" id="0" class="book-type active">1 / ${numberpage}</a>`
           
         }
   
@@ -42,7 +42,7 @@ function showNav(num) {
         numbers = parseInt(numbers)+1;
         
         if (i == numPage) {
-          navigation.innerHTML += `<a href="javascript:void(0)" id="${i}" class="book-type active">${numbers}/ ${numberpage}</a>`
+          navigation.innerHTML += `<a href="javascript:void(0)" id="${i}" class="book-type active">${numbers} / ${numberpage}</a>`
         }
         
         
