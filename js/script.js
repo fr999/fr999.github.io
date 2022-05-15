@@ -115,7 +115,6 @@ async function getMovies(url, searchTerm, catTerm) {
       
         var nextPage = Number(numPage) + NumberByPage;
         
-        console.log(numPage)
       
         showNav(result.length)
       
