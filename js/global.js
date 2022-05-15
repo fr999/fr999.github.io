@@ -14,6 +14,56 @@ sortMENU.forEach((item, index) => {
 });
 
 
+//menu navigation
+
+function showNav(num) {
+  
+        var navigation = document.getElementById("previous");
+        
+        var prevpage = Number(numPage) - NumberByPage;
+        var nextpage = Number(numPage) + NumberByPage;
+        
+        var numberpage = Math.ceil(Number(num) / NumberByPage);
+        
+        
+        
+        navigation.innerHTML += `<a href="javascript:void(0)" id="${prevpage}" class="book-type">Précédent</a>`
+        navigation.innerHTML += `<a href="javascript:void(0)" id="${nextpage}" class="book-type">Suivant</a>`
+        
+        if (numPage == 0){
+             navigation.innerHTML += `<a href="javascript:void(0)" id="0" class="book-type active">1/ ${numberpage}</a>`
+          
+        }
+  
+  
+        for (var i = NumberByPage; i < num; i=i+NumberByPage) {
+        
+        numbers = i.toString().slice(0, -1);
+        numbers = parseInt(numbers)+1;
+        
+        if (i == numPage) {
+          navigation.innerHTML += `<a href="javascript:void(0)" id="${i}" class="book-type active">${numbers}/ ${numberpage}</a>`
+        }
+        
+        
+      }
+      
+        navigation.addEventListener("click", (e) => {
+          
+          if (e.target.id <= 0) {
+            urlParams.delete('page');
+            
+          } else {
+            urlParams.set('page', e.target.id)
+          }
+
+        window.location.search = urlParams;
+        });
+  
+  
+}
+
+
 //menu genre
 const selectMENU = document.getElementById("menu");
 
