@@ -16,6 +16,9 @@ const sliderHMIMG = document.getElementById("slider_img");
 
 const urlParams = new URLSearchParams(window.location.search);
 
+const NumberByPage = Number(10);
+
+
 
 //const myParam = urlParams.get('q');
 //var c = url.searchParams.get("c");
@@ -43,6 +46,26 @@ async function getMovies(url, searchTerm, catTerm) {
     const resp = await fetch(url);
     const respData = await resp.json();
     var result = respData.results;
+    
+    var navigation = document.getElementById("previous");
+    
+    //page next and previos
+      if (urlParams.has('page')) {
+        
+        numPage = urlParams.get('page')
+        
+        //navigation.innerHTML += `<a href="javascript:void(0)" id="0" class="book-type">Page: 1</a>`
+      
+      } else {
+        numPage = 0;
+        //navigation.innerHTML += `<a href="javascript:void(0)" id="0" class="book-type active">1</a>`
+      }
+      
+      //}
+  
+    
+   
+    
     const rst_category = respData.category_genre;
 
     //load slider et select
@@ -89,6 +112,14 @@ async function getMovies(url, searchTerm, catTerm) {
         }
 
     if (main){
+      
+        var nextPage = Number(numPage) + NumberByPage;
+        
+        console.log(numPage)
+      
+        showNav(result.length)
+      
+        result = result.slice(numPage, nextPage);
         showMovies(result);
     }
 }
@@ -135,7 +166,7 @@ function showSlider2(sliders) {
             // sliderHMIMG.classList.remove("in_blur");
             // sliderHMIMG.classList.add("out_blur");
             sliderHMIMG.style.filter = "blur(80px)";
-        }, (8000)); 
+        }, (8000));
         
 
         setTimeout(function() {
@@ -149,7 +180,7 @@ function showSlider2(sliders) {
 
             setTimeout(function() {
                 sliderHMIMG.style.filter = "blur(80px)";
-            }, (8000)); 
+            }, (8000));
             
             if(count >= max_count) {
                 showSlider(sliders)
@@ -169,7 +200,7 @@ function ToCard_sauv(repos) {
     //     const current = urlParams.get('c');
   
     //     if (e.target.checked === false) {
-    //             urlParams.delete('c');            
+    //             urlParams.delete('c');
     //     } else {
     //             urlParams.set('c', e.target.value);
 
