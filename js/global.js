@@ -14,7 +14,20 @@ sortMENU.forEach((item, index) => {
 });
 
 
+const urlParams = new URLSearchParams(window.location.search);
 //menu navigation
+//page next and previos
+if (urlParams.has('page')) {
+  
+  numPage = urlParams.get('page')
+  
+  //navigation.innerHTML += `<a href="javascript:void(0)" id="0" class="book-type">Page: 1</a>`
+
+} else {
+  numPage = 0;
+  //navigation.innerHTML += `<a href="javascript:void(0)" id="0" class="book-type active">1</a>`
+}
+
 
 function showNav(num) {
   
@@ -60,6 +73,28 @@ function showNav(num) {
         window.location.search = urlParams;
         });
   
+  
+}
+
+function showNavInfo() {
+  
+  var navigation = document.getElementById("previous");
+  navigation.innerHTML += `<a href="javascript:void(0)" id="${numPage}" class="book-type">Retour</a>`
+   
+  navigation.addEventListener("click", (e) => {
+    urlParams.delete('id');
+  
+  if (e.target.id <= 0) {
+    urlParams.delete('page');
+    
+  } else {
+    urlParams.set('page', e.target.id)
+  }
+  
+ 
+
+  window.location.href = "index.html?"+urlParams;
+  });
   
 }
 
