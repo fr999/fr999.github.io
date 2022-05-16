@@ -13,13 +13,18 @@ const sliderHM = document.getElementById("slider");
 const selectHM = document.getElementById("filter_options");
 
 
+
+
 //var url_string = "http://www.example.com/t.html?a=1&b=3&c=m2-m3-m4-m5"; //window.location.href
 
-const urlParams = new URLSearchParams(window.location.search);
 
 var c = urlParams.get("id");
 //console.log(c);
 // initially get fav movies
+
+
+showNavInfo();
+
 getMovies(APIURL);
 
 async function getMovies(url) {
@@ -52,22 +57,23 @@ function showMovies(movies, respData) {
 
         //genre
         genre.forEach((gr) => {
-            category_genre.find( function(item) { 
+            category_genre.find( function(item) {
                 if (item.id == gr) {
 
                     repoLIKE = repoLIKE +`
                     <div class="like-profile">
                     <img src="https://eu.ui-avatars.com/api/?name=`+item.id+`" alt="" class="like-img">
-                   </div>                   
-                    ` 
-                    repoNAME = repoNAME + `<div class="like-name">`+item.name+`</div>`; 
+                   </div>
+                    `
+                    repoNAME = repoNAME + `<div class="like-name">`+item.name+`</div>`;
                 }
              });
         })
 
         repoLIKE = repoLIKE + repoNAME;
 
-        sliderHMIMG.src = backdrop;
+        //sliderHMIMG.src = backdrop;
+        sliderHM.innerHTML += `<div class="slide block active" style="background: url(${backdrop}) no-repeat center center; background-size: cover;"></div>`
 
 
         //header.getElementsByTagName('h1')[0].innerHTML = `${title}`;
