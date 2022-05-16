@@ -23,15 +23,15 @@ document.write(`<div class="book-store">
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu">
 <path d="M12 1v2M12 21v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M1 12h2M21 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4"/></svg>
  <path d="M3 12h18M3 6h18M3 18h18" /></svg>
- <a href="#">Couleur</a> 
+ <a href="#">Couleur</a>
 </div>
  <div class="profile-menu">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu">
    <path d="M3 12h18M3 6h18M3 18h18" /></svg>
-   <a href="#">Genre</a> 
+   <a href="#">Genre</a>
  </div>
   <nav role="navigation">
-    <div id="menuToggle"> 
+    <div id="menuToggle">
       <input name="toggle" type="checkbox" />
       <label for="toggle"></label>
       <ul id="menu">
@@ -40,4 +40,4 @@ document.write(`<div class="book-store">
     </div>
   </nav></div></div>
 <div id="slider-header">
-<div id="slider"><img id="slider_img" src="" /></div></div>`);
+<div id="slider" class="slider"></div></div>`);
