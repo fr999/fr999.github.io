@@ -632,30 +632,30 @@ h1 {
 
 
 .book-see.book-blue {
-  background-color: var(--color-bleue-alpha);
-}
-a:hover .book-see.book-blue  {
   background-color: var(--color-bleue);
 }
-.book-see.book-pink {
-  background-color: var(--color-pink-alpha);
+a:hover .book-see.book-blue  {
+  background-color: var(--color-bleue-alpha);
 }
-a:hover .book-see.book-pink  {
+.book-see.book-pink {
   background-color: var(--color-pink);
 }
+a:hover .book-see.book-pink  {
+  background-color: var(--color-pink-alpha);
+}
 .book-see.book-yellow {
-  background-color: var(--color-yellow-alpha);
+  background-color: var(--color-yellow);
   /* background-color:#fdca95 ; */
 }
 a:hover .book-see.book-yellow {
   /* background-color: #fb9124; */
-  background-color: var(--color-yellow);
+  background-color: var(--color-yellow-alpha);
 }
 .book-see.book-purple {
-  background-color:var(--color-purple-alpha);
+  background-color:var(--color-purple);
 }
 a:hover .book-see.book-purple  {
-  background-color:var(--color-purple);
+  background-color:var(--color-purple-alpha);
 }
 
 .main-wrapper {
