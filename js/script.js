@@ -12,9 +12,8 @@ const selectHM = document.getElementById("filter_options");
 const filterHM = document.getElementById("filters-container");
 
 const sliderHM = document.getElementById("slider");
-const sliderHMIMG = document.getElementById("slider_img");
+//const sliderHMIMG = document.getElementById("slider_img");
 
-const urlParams = new URLSearchParams(window.location.search);
 
 const NumberByPage = Number(10);
 
@@ -46,30 +45,10 @@ async function getMovies(url, searchTerm, catTerm) {
     const resp = await fetch(url);
     const respData = await resp.json();
     var result = respData.results;
-    
-    var navigation = document.getElementById("previous");
-    
-    //page next and previos
-      if (urlParams.has('page')) {
-        
-        numPage = urlParams.get('page')
-        
-        //navigation.innerHTML += `<a href="javascript:void(0)" id="0" class="book-type">Page: 1</a>`
-      
-      } else {
-        numPage = 0;
-        //navigation.innerHTML += `<a href="javascript:void(0)" id="0" class="book-type active">1</a>`
-      }
-      
-      //}
-  
-    
    
     
     const rst_category = respData.category_genre;
 
-    //load slider et select
-    showSlider(result)
     showGenre(rst_category)
 
     if (urlParams.has('q')) {
@@ -110,6 +89,7 @@ async function getMovies(url, searchTerm, catTerm) {
                 result = result.sort((a, b) => a.title.localeCompare(b.title))
           }
         }
+        
 
     if (main){
       
@@ -119,6 +99,10 @@ async function getMovies(url, searchTerm, catTerm) {
         showNav(result.length)
       
         result = result.slice(numPage, nextPage);
+        
+        //load slider et select
+        showSlider3(result);
+        
         showMovies(result);
     }
 }
@@ -128,25 +112,17 @@ function showSlider(sliders) {
     var timer = 0;
     var count = 0;
     var max_count = sliders.length;
+    
+    
+    //sliderHM
     // console.log(max_count)
+    
+    let randslide = sliders.sort(() => 0.5 - Math.random())[0];
+    
+    sliderHMIMG.src = randslide.backdrop;
+    
+    console.log(randslide.backdrop)
 
-    sliders.forEach((slider) => {
-        const { backdrop } = slider;
-
-        sliderHMIMG.src = backdrop;
-        setTimeout(function() {
-            count++;
-            sliderHMIMG.src = backdrop;
-            
-            if(count >= max_count) {
-                showSlider(sliders)
-              }
-
-        }, timer += 20000);
-
-        // console.log(backdrop)
-
-    });
 }
 
 function showSlider2(sliders) {
@@ -190,6 +166,58 @@ function showSlider2(sliders) {
         // console.log(backdrop)
 
     });
+}
+
+function showSlider3(sliders) {
+    // clear main
+    var timer = 0;
+    var count = 0;
+    var max_count = sliders.length;
+    // console.log(max_count)
+    
+    
+    //sliderHM
+
+    sliders.forEach((slider) => {
+        const { backdrop } = slider;
+        
+        sliderHM.innerHTML += `<div class="slide block" style="background: url(${backdrop}) no-repeat center center; background-size: cover;"></div>`
+        //sliderHM.appendChild(slideDiv);
+        
+        
+        supernova_slider();
+        
+
+        // console.log(backdrop)
+
+    });
+}
+
+function supernova_slider() {
+    let slide = document.querySelectorAll(".slide"),
+        i = 0;
+
+        function next()  {
+          slide[i].classList.remove("active");
+          i++;
+  
+          if (i >= slide.length) {
+              i = 0;
+          }
+  
+          slide[i].classList.add("active");
+          
+          
+        };
+
+
+
+    slider_callback();
+    let sliderInterval = window.setInterval(slider_callback, 20000);
+
+    function slider_callback() {
+        next();
+    }
 }
 
 function ToCard_sauv(repos) {
@@ -260,8 +288,10 @@ function showMovies(movies) {
 
         const movieEl = document.createElement("div");
         movieEl.classList.add("book-card");
+        
+        //<a href="info.html?id=${id}&page=${numPage}&c=${catPage}&url=${urlParams}">
 
-        movieEl.innerHTML = `<a href="info.html?id=${id}">
+        movieEl.innerHTML = `<a href="info.html?id=${id}&${urlParams}">
             <div class="content-wrapper"><div class="content-image">
             <img
                 src="${backdrop}"
