@@ -101,7 +101,8 @@ async function getMovies(url, searchTerm, catTerm) {
         result = result.slice(numPage, nextPage);
         
         //load slider et select
-        showSlider3(result);
+        slider =  [...result];
+        showSlider3(slider);
         
         showMovies(result);
     }
@@ -175,7 +176,7 @@ function showSlider3(sliders) {
     var max_count = sliders.length;
     // console.log(max_count)
     
-    
+    list = sliders.sort(() => Math.random() - 0.5)
     //sliderHM
 
     sliders.forEach((slider) => {
