@@ -487,7 +487,9 @@ body {
 .header-title {
   font-size: 16px;
   font-weight: 400;
-  margin-right: 120px;
+  margin-right: auto;
+  margin-left:auto;
+  text-align:center;
 }
 .header-title span {
   font-weight: 500;
@@ -969,6 +971,7 @@ a:hover .book-see.book-purple  {
 .like-name {
   font-size: 14px;
   margin-left: 15px;
+  margin-top: 6px;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
