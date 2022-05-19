@@ -285,10 +285,18 @@ function showMovies(movies) {
     main.innerHTML = "";
 
     movies.forEach((movie) => {
-        const { id, backdrop, title, version, release_date, creator, creator_translate } = movie;
+        const { id, backdrop, title, version, release_date, creator, creator_translate, version_translate } = movie;
 
         const movieEl = document.createElement("div");
         movieEl.classList.add("book-card");
+        
+        let notversion = ""
+        
+        if (version_translate && version != version_translate) {
+          
+          notversion =  '<div class="like-profile"><img title="Version du jeux diffèrente de la traduction" src="https://eu.ui-avatars.com/api/?background=FFA500&name=&#x26A0;" alt="" class="like-img"></div>'
+          
+        }
         
         //<a href="info.html?id=${id}&page=${numPage}&c=${catPage}&url=${urlParams}">
 
@@ -306,13 +314,14 @@ function showMovies(movies) {
             </div>
             <div class="likes">
             <div class="like-profile">
-           <img src="https://eu.ui-avatars.com/api/?name=DE" alt="" class="like-img">
-          </div>
+            <img src="https://eu.ui-avatars.com/api/?name=DE" alt="" class="like-img">
+            </div>
             <div class="like-profile">
-           <img src="https://eu.ui-avatars.com/api/?name=TR" alt="" class="like-img">
-          </div>
+            <img src="https://eu.ui-avatars.com/api/?name=TR" alt="" class="like-img">
+            </div>
+            ${notversion}
             <div class="like-name">Développeur: <span>${creator}</span> | Traducteur: <span>${creator_translate}</span></div>
-          </div></a>
+          </div>
         `;
 
         main.appendChild(movieEl);
