@@ -71,6 +71,14 @@ function showMovies(movies, respData) {
         })
 
         repoLIKE = repoLIKE + repoNAME;
+        
+        let notversion = ""
+        
+        if (version_translate && version != version_translate) {
+          
+          notversion =  '<div class="like-profile"><img title="Version du jeux diffèrente de la traduction" src="https://eu.ui-avatars.com/api/?background=FFA500&name=&#x26A0;" alt="" class="like-img"></div>'
+          
+        }
 
         //sliderHMIMG.src = backdrop;
         sliderHM.innerHTML += `<div class="slide block active" style="background: url(${backdrop}) no-repeat center center; background-size: cover;"></div>`
@@ -79,6 +87,8 @@ function showMovies(movies, respData) {
         //header.getElementsByTagName('h1')[0].innerHTML = `${title}`;
         //header.getElementsByTagName('p')[0].innerHTML = `[ Version ${version} ]`;
 
+        //${sponsoring[0][sponso]}
+        
         const movieEl1 = document.createElement("div");
         movieEl1.classList.add("book-card");
 
@@ -181,14 +191,12 @@ function showMovies(movies, respData) {
 
 
       <div class="likes">
-      <div class="like-profile">
-     <img src="https://eu.ui-avatars.com/api/?name=SP" alt="" class="like-img">
-    </div>
-    <div class="like-profile">
-    <img src="https://eu.ui-avatars.com/api/?name=TY" alt="" class="like-img">
-   </div>
-      <div class="like-name">Lien Sponso: <span>${sponsoring[0][sponso]}</span>  | Type: <span>${type_translate}</span></div>
-    </div>
+        <div class="like-profile">
+          <img src="https://eu.ui-avatars.com/api/?name=TY" alt="" class="like-img">
+        </div>
+        ${notversion}
+        <div class="like-name">Type: <span>${type_translate}</span></div>
+      </div>
 
       <div class="book-button">
       <li>
