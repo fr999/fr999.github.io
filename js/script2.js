@@ -122,11 +122,11 @@ function showMovies(movies, respData) {
         </li><li style="flex: auto ;"><a href="${url_file}" target="_blank"><div class="book-see book-pink">Patreon: <span>${creator}</span></div></a>
         </li></div>`
 
-        const imglight1 = movieEl1.querySelector(".dialog-image");
+        // const imglight1 = movieEl1.querySelector(".dialog-image");
 
-        imglight1.addEventListener("click", (e) => {
-            getLight(e.target.src)
-        });
+        // imglight1.addEventListener("click", (e) => {
+        //     getLight(e.target.src)
+        // });
         main.appendChild(movieEl1);
 
         //img
@@ -139,11 +139,11 @@ function showMovies(movies, respData) {
             <div class="content-image2"><img src="${images[2]}" class="book-card-img-info2"></div>
             </div>`
 
-        const imglight2 = movieEl2.querySelector(".dialog-image");
+        // const imglight2 = movieEl2.querySelector(".dialog-image");
 
-        imglight2.addEventListener("click", (e) => {
-            getLight(e.target.src)
-        });
+        // imglight2.addEventListener("click", (e) => {
+        //     getLight(e.target.src)
+        // });
         main.appendChild(movieEl2);
 
         //img2
@@ -156,11 +156,11 @@ function showMovies(movies, respData) {
             <div class="content-image2"><img src="${images[4]}" class="book-card-img-info2"></div>
             </div>`
 
-        const imglight3 = movieEl3.querySelector(".dialog-image");
+        // const imglight3 = movieEl3.querySelector(".dialog-image");
 
-        imglight3.addEventListener("click", (e) => {
-            getLight(e.target.src)
-        });
+        // imglight3.addEventListener("click", (e) => {
+        //     getLight(e.target.src)
+        // });
         main.appendChild(movieEl3);
 
         //
@@ -204,24 +204,88 @@ function showMovies(movies, respData) {
       </li><li><a href="${threads_translate}" target="_blank"><div class="book-see book-purple">Discussion: <span>F95zone</span></div></a>
       </li></div>`;
 
-      const imglight4 = movieEl4.querySelector(".dialog-image");
+      // const imglight4 = movieEl4.querySelector(".dialog-image");
 
-      imglight4.addEventListener("click", (e) => {
-          getLight(e.target.src)
-      });
+      // imglight4.addEventListener("click", (e) => {
+      //     getLight(e.target.src)
+      // });
 
         main.appendChild(movieEl4);
+        
+        
+        
+      const imglight = main.querySelectorAll(".dialog-image img");
+      
+      console.log(imglight);
+      imglight.forEach((item, index) => {
+        item.addEventListener('click', (event) => {
+        event.preventDefault();
+      
+        getLight(imglight, index);
+      
+     
+        });
+      });
+
+      // imglight4.addEventListener("click", (e) => {
+      //     getLight(e.target.src)
+      // });
 }
 
 
 
-function getLight(imag) {
+function getLight(item, index) {
     var light = document.getElementById("lightbox");
+    //clear doc
+    light.innerHTML = '';
 
     light.style.display = "block";
+    
+    if (!item) { return }
+    
+    img = item[index].src;
+    
+    const disp = document.createElement("div");
+    disp.classList.add("light");
+    disp.innerHTML = `<img src="${img}" />`;
 
-    light.innerHTML = `<div class="light"><img src="${imag}" /></div>`
-    light.addEventListener("click", getClose);
+    //light.innerHTML = `<div class="light"><img src="${img}" />`
+    disp.addEventListener("click", getClose);
+    light.appendChild(disp);
+    
+    const nextbutton = document.createElement("div");
+    nextbutton.innerHTML = `<button class="light-next">></button>`;
+    //nextbutton.addEventListener("click", getLight(item));
+    
+    nextbutton.addEventListener("click", function() {
+
+      
+      if(index >= item.length -1){
+        index = -1;
+      }
+      
+      getLight(item, index+1);
+    });
+    
+    light.appendChild(nextbutton);
+    
+    
+    //prev
+    const prevbutton = document.createElement("div");
+    prevbutton.innerHTML = `<button class="light-prev"><</button>`;
+    //nextbutton.addEventListener("click", getLight(item));
+    
+    prevbutton.addEventListener("click", function() {
+
+      
+      if(index >= item.length -1){
+        index = -1;
+      }
+      
+      getLight(item, index+1);
+    });
+    
+    light.appendChild(prevbutton);
 
 }
 
