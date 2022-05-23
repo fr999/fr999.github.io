@@ -177,21 +177,27 @@ function showSlider3(sliders) {
     // console.log(max_count)
     
     list = sliders.sort(() => Math.random() - 0.5)
+    
+    const backdrop = list[0]['backdrop'];
+    
+    
+    sliderHM.innerHTML = `<div class="slide block active" style="background: url(${backdrop}) no-repeat center center; background-size: cover;"></div>`
     //sliderHM
 
-    sliders.forEach((slider) => {
-        const { backdrop } = slider;
+    // sliders.forEach((slider) => {
+    //     const { backdrop } = slider;
         
-        sliderHM.innerHTML += `<div class="slide block" style="background: url(${backdrop}) no-repeat center center; background-size: cover;"></div>`
-        //sliderHM.appendChild(slideDiv);
+    //     //const backdrop2 = backdrop.replace("attachments", "preview");
+        
+    //     sliderHM.innerHTML += `<div class="slide block" style="background: url(${backdrop}) no-repeat center center; background-size: cover;"></div>`
         
         
-        supernova_slider();
+    //     supernova_slider();
         
 
-        // console.log(backdrop)
+    //     // console.log(backdrop)
 
-    });
+    // });
 }
 
 function supernova_slider() {
@@ -299,11 +305,13 @@ function showMovies(movies) {
         }
         
         //<a href="info.html?id=${id}&page=${numPage}&c=${catPage}&url=${urlParams}">
+        const backdrop2 = backdrop.replace("attachments", "preview");
+        
 
         movieEl.innerHTML = `<a href="info.html?id=${id}&${urlParams}">
             <div class="content-wrapper"><div class="content-image">
             <img
-                src="${backdrop}"
+                src="${backdrop2}"
                 alt="${title}"
                 class="book-card-img"
             /></div></div>
@@ -356,6 +364,3 @@ function showMovies(movies) {
    
 //   });
 // });
-
-
-
