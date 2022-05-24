@@ -39,6 +39,14 @@ async function getMovies(url) {
     showMovies(item, respData);
 }
 
+function clonearr(array) {
+  array.forEach(function(item, i) {
+    
+    array[i] = array[i].replace("attachments", "preview");
+    });
+  return array
+}
+
 function showMovies(movies, respData) {
     // clear main
     main.innerHTML = "";
@@ -48,6 +56,8 @@ function showMovies(movies, respData) {
         const sponsoring = respData.sponso_genre
 
         const category_genre = respData.category_genre
+        
+        const previewimg = clonearr([...images]);
 
         // const repoLIKE = document.createElement("div");
         // repoLIKE.classList.add("likes");
@@ -96,8 +106,9 @@ function showMovies(movies, respData) {
         <div class="content-wrapper">
         <div class="dialog-image"><div class="content-image">
         <img
-            src="${images[0]}"
+            src="${previewimg[0]}"
             alt="${title}"
+            data-src="${images[0]}"
             class="book-card-img-info"
         /></div></div></div>
         <div class="card-content">
@@ -135,8 +146,8 @@ function showMovies(movies, respData) {
 
         movieEl2.innerHTML += `
             <div class="dialog-image">
-            <div class="content-image2"><img src="${images[1]}" class="book-card-img-info2"></div>
-            <div class="content-image2"><img src="${images[2]}" class="book-card-img-info2"></div>
+            <div class="content-image2"><img src="${previewimg[1]}" data-src="${images[1]}" class="book-card-img-info2"></div>
+            <div class="content-image2"><img src="${previewimg[2]}" data-src="${images[2]}" class="book-card-img-info2"></div>
             </div>`
 
         // const imglight2 = movieEl2.querySelector(".dialog-image");
@@ -152,8 +163,8 @@ function showMovies(movies, respData) {
 
         movieEl3.innerHTML += `
         <div class="dialog-image">
-            <div class="content-image2"><img src="${images[3]}" class="book-card-img-info2"></div>
-            <div class="content-image2"><img src="${images[4]}" class="book-card-img-info2"></div>
+            <div class="content-image2"><img src="${previewimg[3]}" data-src="${images[3]}" class="book-card-img-info2"></div>
+            <div class="content-image2"><img src="${previewimg[4]}" data-src="${images[4]}" class="book-card-img-info2"></div>
             </div>`
 
         // const imglight3 = movieEl3.querySelector(".dialog-image");
@@ -171,8 +182,9 @@ function showMovies(movies, respData) {
         <div class="content-wrapper">
         <div class="dialog-image"><div class="content-image">
             <img
-                src="${images[5]}"
+                src="${previewimg[5]}"
                 alt="${title}"
+                data-src="${images[5]}"
                 class="book-card-img-info"
             /></div></div></div>
         <div class="card-content">
@@ -216,7 +228,8 @@ function showMovies(movies, respData) {
         
       const imglight = main.querySelectorAll(".dialog-image img");
       
-      console.log(imglight);
+      //console.log(imglight)
+      
       imglight.forEach((item, index) => {
         item.addEventListener('click', (event) => {
         event.preventDefault();
@@ -243,11 +256,30 @@ function getLight(item, index) {
     
     if (!item) { return }
     
-    img = item[index].src;
+    img = item[index].dataset.src;
     
     const disp = document.createElement("div");
     disp.classList.add("light");
-    disp.innerHTML = `<img src="${img}" />`;
+    
+    
+    //loading
+    const load = document.createElement("span");
+    load.classList.add("spanloader");
+    
+    load.innerHTML = `Loading...`
+    
+    disp.appendChild(load);
+    
+    
+    var image = new Image();
+    image.onload = function () {
+        load.style.display = "none";
+    };
+    image.src = img;
+    
+    disp.appendChild(image);
+    
+    //disp.innerHTML += `<img src="${img}" />`;
 
     //light.innerHTML = `<div class="light"><img src="${img}" />`
     disp.addEventListener("click", getClose);
