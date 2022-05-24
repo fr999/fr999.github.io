@@ -122,7 +122,6 @@ function showSlider(sliders) {
     
     sliderHMIMG.src = randslide.backdrop;
     
-    console.log(randslide.backdrop)
 
 }
 
@@ -305,13 +304,13 @@ function showMovies(movies) {
         }
         
         //<a href="info.html?id=${id}&page=${numPage}&c=${catPage}&url=${urlParams}">
-        //const backdrop2 = backdrop.replace("attachments", "preview");
+        const backdrop2 = backdrop.replace("attachments", "preview");
         
 
         movieEl.innerHTML = `<a href="info.html?id=${id}&${urlParams}">
             <div class="content-wrapper"><div class="content-image">
             <img
-                src="${backdrop}"
+                src="${backdrop2}"
                 alt="${title}"
                 class="book-card-img"
             /></div></div>
