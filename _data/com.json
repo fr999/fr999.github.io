@@ -11243,8 +11243,8 @@
     },
     {
         "adult": "false",
-        "overview": "",
-        "release_date": "",
+        "overview": "Vous commencez le jeu en tant que Paul, un vieil homme fatigué de sa vie, qui après un incident (et par la volonté d'une déesse) est maintenant dans le corps d'un garçon de 19 ans (votre personnage). Votre mission est de remplir une série d'objectifs pour cette déesse et ainsi pouvoir continuer votre vie dans ce nouveau corps.",
+        "release_date": "2022/05/24",
         "genre": [
             "3DCG"
         ],
@@ -11260,17 +11260,18 @@
         "sponso": 0,
         "original_language": "en",
         "title": "Young Again",
-        "version": "Ch.12 p",
+        "version": "Ch.13",
         "backdrop": "https://attachments.f95zone.to/2021/06/1263615_1116721_banner_chicas2.jpg",
         "vote_count": "4.5",
-        "url_file": "https://f95zone.to/threads/young-again-ch-9-final-zargon_games.56677/",
-        "url_translate": "https://f95zone.to/threads/young-again-ch-10-public-french-translation-ch-10-gking2392.92349/",
-        "url_creator": "",
-        "creator_translate": "gking2392",
-        "version_translate": "Ch.12 p",
+        "url_file": "https://f95zone.to/threads/young-again-ch-13-zargon_games.56677/",
+        "url_translate": "https://mega.nz/file/M44E3QoY#WQFYfhRCgelVeWyFFDHSQShBW5IV0X9oCOXJlO0od24",
+        "url_creator": "https://www.patreon.com/zargon_games",
+        "creator":"Zargon_games",
+        "creator_translate": "Gking2392",
+        "version_translate": "Ch.13",
         "type_translate": "Traduction Humaine",
-        "info_translate": "",
-        "threads_translate": "https://f95zone.to/threads/games-translated-into-french-jeux-traduit-en-francais-gking2392.93760/"
+        "info_translate": "Le jeu est traduit à 100% en Français avec relecture complète (traduction manuel) de tous les chemins possibles.",
+        "threads_translate": "https://f95zone.to/threads/young-again-french-translation-ch-13-gking2392.92349/"
     },
     {
         "adult": "false",
