@@ -97,6 +97,9 @@ async function getMovies(url, searchTerm, catTerm) {
         
       
         showNav(result.length)
+        
+        //trie par date
+        result = result.sort((a, b) => b.release_date.localeCompare(a.release_date))
       
         result = result.slice(numPage, nextPage);
         
