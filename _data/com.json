@@ -181,37 +181,6 @@
 
       {
         "adult": false,
-        "overview": "Marchez dans la peau d'un protagoniste anonyme qui a eu un accident et a signé un pacte avec le diable pour devenir un esprit puissant, capable de posséder divers PNJ et de se renforcer lentement. Cela rend le Betrayed unique car vous ne contrôlez pas qu'un seul personnage, mais bien d'autres au cours de votre voyage.",
-        "release_date": "2021-01-04",
-        "genre": ["3dg", "ani", "inc"],
-        "images": [
-          "https://attachments.f95zone.to/2018/12/203606_155342_136957_06.jpg",
-          "https://attachments.f95zone.to/2018/12/203607_155343_136961_02.jpg",
-          "https://attachments.f95zone.to/2018/12/203609_155345_136964_UVODNI_SCENA_17.jpg",
-          "https://attachments.f95zone.to/2019/09/417841_scarlett_s22_webcam06.png",
-          "https://attachments.f95zone.to/2019/09/417842_scarlett_s21_striptease10.png",
-          "https://attachments.f95zone.to/2018/12/203703_Megan_and_ivana1.png"
-        ],
-        "id": 7,
-        "sponso": 0,
-        "original_language": "en",
-        "title": "Betrayed",
-        "version": "0.96",
-        "backdrop": "https://attachments.f95zone.to/2019/07/368965_Betrayed.jpg",
-        "vote_count": 1507,
-        "url_file": "https://f95zone.to/threads/betrayed-v0-62-joraell.17512/",
-        "url_translate": "https://mega.nz/file/2o1R1Y6B#oe93PRVTBKZXpGfJgXX7BHe6THFADneP9wl785uWPzY",
-        "url_creator": "https://www.patreon.com/joraell",
-        "creator":"Joraell",
-        "creator_translate" : "frelon71",
-        "version_translate" : "0.91",
-        "type_translate" : "Humaine",
-        "info_translate" : "Les astuce ne sont pas traduite.",
-        "threads_translate": "https://f95zone.to/threads/betrayed-v0-80-french-translation.56752/"
-      },
-
-      {
-        "adult": false,
         "overview": "Le personnage principal est un homme qui vient de déménager dans une grande ville, où il obtient un nouvel emploi et veut créer un groupe de musique. De nouvelles connaissances, de nouvelles opportunités, maintenant tout est entre vos mains.",
         "release_date": "2021-02-14",
         "genre": ["3dg", "ani", "mil"],
@@ -1894,8 +1863,8 @@
     },
     {
         "adult": "false",
-        "overview": "",
-        "release_date": "",
+        "overview": "Marchez dans la peau d'un protagoniste anonyme qui meurt accidentellement et signe un pacte avec le diable pour devenir un esprit puissant, qui peut posséder divers PNJ et se renforce lentement.",
+        "release_date": "2022/06/01",
         "genre": [
             "3DCG"
         ],
@@ -1911,17 +1880,18 @@
         "sponso": 0,
         "original_language": "en",
         "title": "Betrayed",
-        "version": "V0.96",
+        "version": "0.96",
         "backdrop": "https://attachments.f95zone.to/2021/05/1202595_d58fmz.gif",
         "vote_count": "4.5",
         "url_file": "https://f95zone.to/threads/betrayed-v0-66-joraell.17512/",
-        "url_translate": "https://mega.nz/file/2o1R1Y6B#oe93PRVTBKZXpGfJgXX7BHe6THFADneP9wl785uWPzY",
-        "url_creator": "",
+        "url_translate": "https://drive.google.com/file/d/1rT_DjkTeodMzlio1pzorEFi_rn1aafZI/view?usp=sharing",
+        "url_creator": "https://www.patreon.com/joraell",
+        "creator": "Joraell",
         "creator_translate": "frelon71",
-        "version_translate": "V0.91",
+        "version_translate": "0.96",
         "type_translate": "Traduction Humaine",
-        "info_translate": "",
-        "threads_translate": ""
+        "info_translate": "Correction de l'archive by AngeDivin.",
+        "threads_translate": "https://f95zone.to/threads/traduction-en-francais-french-translation.26002/page-168#post-8238326"
     },
     {
         "adult": "false",
