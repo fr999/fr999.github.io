@@ -2,15 +2,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
 @import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
 :root {
-  --body-bg-color: #becbd2;
-  --body-color-light: #8b939c;
+  --body-bg-color: hsl(200, 18%, 76%);
+  --body-color: hsl(200, 18%, 46%);
+  /*--body-hover: hsl(200, 18%, 36%);
+  --body-color-light: hsl(200, 18%, 26%);*/
+  
   --body-font: "Roboto", sans-serif;
-  --page-bg-color: #dfe5e8;
-  --body-color: #607d8b;
+  --page-bg-color: hsl(200, 18%, 86%);
 
-  --card-color:#f5f7f8;
-  --border-color: #b8bec3;
-  --placeholder: #ccd0d2;
+
+  --card-color: hsl(200, 18%, 96%);
+  
   --color-bleue: #22cdec;
   --color-pink:#ff6dbe;
   --color-yellow: rgb(251, 145, 36);
@@ -95,75 +97,80 @@
 /* mode sombre */
 @media (prefers-color-scheme: dark) {
   :root {
-    --body-bg-color: #303030;
-    --page-bg-color: #3a3a3a;
-    --card-color:#444444;
-    --body-color: #c0c0c0;
-
-    --body-color-light: #8b939c;
+    --card-color: hsl(200, 0%, 6%);
+    --page-bg-color: hsl(200, 0%, 16%);
+    --body-bg-color: hsl(200, 0%, 26%);
+    --body-color: hsl(200, 0%, 56%);
 
   }
   }
 
 [data-theme="dark"] {
-    --body-bg-color: #303030;
-    --page-bg-color: #3a3a3a;
-    --card-color:#444444;
-    --body-color: #c0c0c0;
-
-    --body-color-light: #8b939c;
+    --card-color: hsl(200, 0%, 6%);
+    --page-bg-color: hsl(200, 0%, 16%);
+    --body-bg-color: hsl(200, 0%, 26%);
+    --body-color: hsl(200, 0%, 56%);
 
   }
-
-  [data-theme="light-blue"] {
-    --body-bg-color: #d0ecf7;
-    --page-bg-color: #e7f5fb;
-    --card-color:#f8fcfe;
-    --body-color: #87ceeb;
-
-    --body-color-light: #8b939c;
-
-  }
-
-  [data-theme="light-green"] {
-    --body-bg-color: #d1e7b7;
-    --page-bg-color: #e8f3db;
-    --card-color:#f8fbf4;
-    --body-color: #466522;
-
-    --body-color-light: #8b939c;
-
-  }
+  
 
   [data-theme="grey"] {
-    --body-bg-color: #4f4f4f;
-    --page-bg-color: #5f5f5f;
-    --card-color:#6f6f6f;
-    --body-color: #c5c5c5;
-
-    --body-color-light: #8b939c;
+    --card-color: hsl(200, 0%, 96%);
+    --page-bg-color: hsl(200, 0%, 86%);
+    --body-bg-color: hsl(200, 0%, 76%);
+    --body-color: hsl(200, 0%, 46%);
 
   }
-
-  [data-theme="deep-purple"] {
-    --body-bg-color: #c1ade5;
-    --page-bg-color: #e0d6f2;
-    --card-color:#f6f3fb;
-    --body-color: #673ab7;
-
-    --body-color-light: #8b939c;
+  
+    /*hue rouge */
+  [data-theme="deep-red"] {
+    --card-color: hsl(0, 18%, 96%);
+    --page-bg-color: hsl(0, 18%, 86%);
+    --body-bg-color: hsl(0, 18%, 76%);
+    --body-color: hsl(0, 18%, 46%);
  
   }
-
+    /*hue jaune */
   [data-theme="deep-orange"] {
-    --body-bg-color: #ffbca7;
-    --page-bg-color: #ffddd3;
-    --card-color:#fff5f2;
-    --body-color: #f6b352;
-
-    --body-color-light: #8b939c;
+    --card-color: hsl(60, 18%, 96%);
+    --page-bg-color: hsl(60, 18%, 86%);
+    --body-bg-color: hsl(60, 18%, 76%);
+    --body-color: hsl(60, 18%, 46%);
  
   }
+    /*hue vert*/
+  [data-theme="light-green"] {
+    --card-color: hsl(120, 18%, 96%);
+    --page-bg-color: hsl(120, 18%, 86%);
+    --body-bg-color: hsl(120, 18%, 76%);
+    --body-color: hsl(120, 18%, 46%);
+
+  }
+    /*hue bleu*/
+  [data-theme="light-blue"] {
+    --card-color: hsl(180, 58%, 96%);
+    --page-bg-color: hsl(180, 58%, 86%);
+    --body-bg-color: hsl(180, 58%, 76%);
+    --body-color: hsl(180, 58%, 46%);
+
+  }
+    /*hue bleu*/
+  [data-theme="deep-blue"] {
+    --card-color: hsl(240, 58%, 96%);
+    --page-bg-color: hsl(240, 58%, 86%);
+    --body-bg-color: hsl(240, 58%, 76%);
+    --body-color: hsl(240, 58%, 46%);
+
+  }
+    /*hue violet*/
+  [data-theme="deep-purple"] {
+    --card-color: hsl(300, 18%, 96%);
+    --page-bg-color: hsl(300, 18%, 86%);
+    --body-bg-color: hsl(300, 18%, 76%);
+    --body-color: hsl(300, 18%, 46%);
+ 
+  }
+  
 
   /* test mode sombre */
 
@@ -196,6 +203,26 @@ img {
   100% {
     transform: rotate(360deg);
   }
+}
+
+@keyframes in {
+  0% { transform: translate(20em,0); left: 0px; opacity: 0; visibility: hidden;  }
+  100% { transform: translate(0,0); left: 0px; opacity: 1; visibility: visible; }
+}
+
+@keyframes out {
+  0% { transform: translate(0,0); opacity: 1; visibility: visible; }
+  100% { transform: translate(20em,0); opacity: 0; visibility: hidden;  }
+}
+
+@keyframes zoomin {
+  0% { transform: scale(0.5); opacity: 0; visibility: hidden;  }
+  100% { transform: scale(1); opacity: 1; visibility: visible; }
+}
+
+@keyframes zoomout {
+  0% { transform: scale(1); opacity: 1; visibility: visible; }
+  100% { transform: scale(0.5); opacity: 0; visibility: hidden;  }
 }
 
 
@@ -302,7 +329,21 @@ img {
   object-fit: cover;
   object-position: center center;
   cursor: pointer;
+
 }
+
+
+#lightbox img.show {
+  -webkit-animation: zoomin .5s ease both;
+  animation: zoomin .5s ease both;
+}
+
+
+#lightbox img.hide {
+  -webkit-animation: zoomout .5s ease both;
+  animation: zoomout .5s ease both;
+}
+
 
 
 /* stop slider */
@@ -363,51 +404,33 @@ img {
 
 /*menu drop */
 .profile-menu:hover{
-  -webkit-text-stroke: .3px;
+  /*-webkit-text-stroke: .3px;*/
+  text-shadow: 0px 1px 1px currentColor;
 }
 
 #menuToggle {
-  display: block;
-  position: relative;
-  top: 10px;
-  left: -50px;
-  z-index: 1;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-   -ms-user-select: none;
-       user-select: none;
+  
+  position:relative;
+  right:0;
+  margin:0;
+  padding:0;
+  z-index:1;
+  opacity: 0;
+  visibility: hidden;
+
 }
 
-#menuToggle a {
-  text-decoration: none;
-  -webkit-transition: color 0.3s ease;
-  -o-transition: color 0.3s ease;
-  transition: color 0.3s ease;
+#menuToggle.show {
+  -webkit-animation: in .5s ease both;
+  animation: in .5s ease both;
 }
 
-/* The hamburger button hidden inside an input element */
-#menuToggle input {
-  display: block;
-  width: 80px;
-  height: 20px;
-  position: absolute;
-  top: -7px;
-  left: -10px;
-  padding: 0;
-  cursor: pointer;
-  opacity: 0; /* hide this */
-  z-index: 2; /* and place it over the hamburger */
-  -webkit-touch-callout: none;
+
+#menuToggle.hide {
+  -webkit-animation: out .5s ease both;
+  animation: out .5s ease both;
 }
 
-#menuToggle label {
-  position: relative;
-  display: block;
-  height: 30px;
-}
-#menuToggle label span {
-  display: none;
-}
 
 /*
  * Use absolute positioning to place the menu off-screen
@@ -415,14 +438,14 @@ img {
 #menu {
   position: absolute;
   width: 195px;
-  height:254px;
+  height:351px;
   overflow: auto;
-  margin: 10px 0 0 121px;
-  padding: 25px 25px 25px 50px;
+  padding: 0 25px 0 50px;
   background-color: var(--page-bg-color);
   list-style-type: none;
   /* Hide the menu off-screen to the left */
-  left: 0;
+  right: -31px;
+  top:20px;
   -webkit-transition: left 0.3s ease;
   -o-transition: left 0.3s ease;
   transition: left 0.3s ease;
@@ -450,9 +473,12 @@ img {
   color: var(--body-color);
 }
 
+
 #menu li a:hover {
-  filter: hue-rotate(40deg);
-  -webkit-text-stroke: .3px;
+  /*filter: hue-rotate(40deg);
+  -webkit-text-stroke: .3px;*/
+  text-shadow: 0px 1px 1px currentColor;
+  
 }
 
 #menu li {
@@ -460,8 +486,17 @@ img {
 }
 
 #menu li .active {
-  filter: hue-rotate(40deg);
-  -webkit-text-stroke: .3px;
+  /*filter: hue-rotate(40deg);
+  -webkit-text-stroke: .3px;*/
+  text-shadow: 0px 1px 1px currentColor;
+}
+
+#menu li:first-child{
+  padding-top:20px;
+}
+
+#menu li:last-child{
+  padding-bottom:20px;
 }
 
 /*
@@ -482,7 +517,7 @@ html {
 body {
   background-color:var(--body-bg-color);
   font-family: var(--body-font);
-  font-size: 16px;
+  font-size: 15px;
   color: var(--body-color);
   font-weight: 400;
   margin: 0;
@@ -500,6 +535,7 @@ body {
 .book-store {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   max-width: 1400px;
 
   background-color: var(--page-bg-color);
@@ -511,26 +547,25 @@ body {
 .header {
   height: 70px;
   background-color: var(--page-bg-color);
-  padding: 0 30px;
   font-size: 15px;
-  font-weight: 500;
-  color: var(--body-color-light);
+  color: var(--body-color);
   justify-content: space-between;
   flex-shrink: 0;
 }
 
 .header a {
-  color: var(--body-color-light);
+  color: var(--body-color);
   text-decoration: none;
 }
 
 .header a:hover {
-  -webkit-text-stroke: .3px;
+   text-shadow: 0px 1px 1px currentColor;
 }
 
 
 .search-bar {
   position: relative;
+  color: var(--body-color);
 }
 .search-bar input {
   height: 100%;
@@ -538,41 +573,49 @@ body {
   display: block;
   font-size: 15px;
   background-color: transparent;
-  border: none;
-  font-weight: 600;
-  padding: 0 10px 0 40px;
-  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='none' stroke='%238b939c' stroke-width='3' stroke-linecap='round' stroke-linejoin='round' class='feather feather-search'%3e%3ccircle cx='11' cy='11' r='8'/%3e%3cpath d='M21 21l-4.35-4.35'/%3e%3c/svg%3e");
-  background-repeat: no-repeat;
-  background-size: 15px;
-  background-position: 15px 50%;
   color: var(--body-color);
+  border: none;
   font-family: var(--body-font);
 }
+
 .search-bar input::placeholder {
-  color: var(--placeholder);
+    color: var(--body-color);
+  
+}
+
+
+.border-right {
+  border-right: 1px solid var(--body-bg-color);
+  margin: 0 20px 0 20px;
+  width:0;
+  height:20px;
+}
+
+.border-left {
+  padding-left:20px;
+}
+
+.browse {
+  flex-shrink: 0;
+  padding-left: 30px;
 }
 
 .browse-category {
-  border-right: 1px solid var(--border-color);
-  white-space: nowrap;
-  padding: 0 20px 0 20px;
 }
+
 .browse-category svg {
   width: 16px;
-  margin: 0px 10px 0 8px;
+  margin: 0px 10px 0 0;
 }
 
 .header-title {
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 500;
   margin-right: auto;
   margin-left:auto;
   text-align:center;
 }
-.header-title span {
-  font-weight: 500;
-  color: var(--body-color);
-}
+
 
 .user-img {
   width: 28px;
@@ -590,19 +633,13 @@ body {
 
 .profile {
   flex-shrink: 0;
-  padding-right: 20px;
-}
-.profile-menu {
-  border-left: 1px solid var(--border-color);
+  padding-right: 30px;
 }
 
-.profile-color {
-  padding-right:20px;
-}
+
 .profile svg {
   width: 16px;
-  margin: 0 8px 0 15px;
-  flex-shrink: 0;
+  margin: 0 10px 0 0;
 }
 
 
@@ -614,7 +651,7 @@ body {
 
 .book-title {
   color: #ffffff;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .book-author {
@@ -700,7 +737,7 @@ h1 {
   text-align: center;
   background-color: none;
   color: #fff;
-  font-weight: 600;
+  font-weight: 500;
   padding: 15px;
   font-size: 14px;
 }
@@ -769,11 +806,10 @@ a:hover .book-see.book-purple  {
 .main-menu {
   white-space: nowrap;
   padding-bottom: 15px;
-  border-bottom: 1px solid #dcddde;
+  border-bottom: 1px solid var(--body-bg-color);
   position: sticky;
   top: 0;
   right: 0;
-  background-color: var(--page-bg-color);
   z-index: 2;
 }
 
@@ -795,7 +831,8 @@ a:hover .book-see.book-purple  {
   transition: 0.2s;
 }
 .book-type.active, .book-type:hover {
-  -webkit-text-stroke: 0.3px;
+  /*-webkit-text-stroke: 0.3px;*/
+   text-shadow: 0px 1px 1px currentColor;
 }
 .book-type.active:before, .book-type:hover:before {
   content: "";
@@ -807,7 +844,6 @@ a:hover .book-see.book-purple  {
   margin: 0 0 0 25%;
   background-color: var(--body-color);
   box-shadow: 0px -1px 5px 0px var(--body-color);
-  filter: hue-rotate(40deg);
 }
 
 
@@ -871,13 +907,13 @@ a:hover .book-see.book-purple  {
   flex-direction: column;
 
   padding: 0 20px 20px 20px;
-  color: var(--body-color-light);
+  color: var(--body-color);
 
 }
 
 .book-card a {
   text-decoration: none;
-  color: var(--body-color-light);
+  color: var(--body-color);
 }
 
 .book-card:hover {
@@ -919,6 +955,7 @@ a:hover .book-see.book-purple  {
   overflow: hidden;
 }
 
+
 .content-image2 {
   height: 250px;
   margin: 20px 0 0px 0;
@@ -957,7 +994,6 @@ a:hover .book-see.book-purple  {
 
 .book-by {
   font-size: 14px;
-  color: var(--body-color-light);
   margin-top: 4px;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -997,11 +1033,11 @@ a:hover .book-see.book-purple  {
 }
 
 .card-vote {
-  color: var(--body-color-light);
+  color: var(--body-color);
 }
 
 .card-sum {
-  color: var(--body-color-light);
+  color: var(--body-color);
   font-size: 13px;
   line-height: 1.6em;
   -webkit-line-clamp: 4;
@@ -1055,7 +1091,7 @@ a:hover .book-see.book-purple  {
   white-space: nowrap;
 }
 .like-name span {
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .like-name a:hover {
