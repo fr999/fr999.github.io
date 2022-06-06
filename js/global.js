@@ -29,6 +29,7 @@ if (urlParams.has('page')) {
 }
 
 
+
 function showNav(num) {
   
         var navigation = document.getElementById("previous");
@@ -170,6 +171,17 @@ form.addEventListener("submit", (e) => {
 });
 
 
+//genre menu
+const menugenre = document.getElementById("menugenre");
+menugenre.addEventListener("click", function(e) {
+  
+    const menuToggle = document.getElementById("menuToggle");
+    menuToggle.className = menuToggle.className !== 'show' ? 'show' : 'hide';
+    //menuToggle.style.display = menuToggle.style.display !== 'block' ? 'block' : 'none';
+
+
+});
+
 //mode couleur
 
 if (localStorage.getItem('theme')) {
@@ -177,7 +189,7 @@ if (localStorage.getItem('theme')) {
     document.documentElement.setAttribute("data-theme", color)
 }
 
-let color = ['none', 'dark', 'light-blue', 'light-green', 'grey', 'deep-purple', 'deep-orange']
+let color = ['none', 'dark', 'grey', 'deep-red', 'deep-orange', 'light-green', 'light-blue', 'deep-blue', 'deep-purple']
 
 const DarkLight = document.getElementById("color");
 
@@ -192,7 +204,7 @@ DarkLight.addEventListener("click", function(e) {
             document.documentElement.setAttribute("data-theme", next)
             localStorage.setItem('theme', next);
 
-            console.log(nextIndex + next)
+            /*console.log(nextIndex + next)*/
         }
         else {
             document.documentElement.setAttribute("data-theme", "dark")
