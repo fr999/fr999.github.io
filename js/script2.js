@@ -272,8 +272,10 @@ function getLight(item, index) {
     
     
     var image = new Image();
+    image.id = "lightimg";
     image.onload = function () {
         load.style.display = "none";
+        image.classList.add('show');
     };
     image.src = img;
     
@@ -296,7 +298,9 @@ function getLight(item, index) {
         index = -1;
       }
       
-      getLight(item, index+1);
+      image.classList.add('hide');
+      setTimeout(function() { getLight(item, index+1); }, 200);
+      
     });
     
     light.appendChild(nextbutton);
@@ -314,7 +318,9 @@ function getLight(item, index) {
         index = -1;
       }
       
-      getLight(item, index+1);
+      image.classList.add('hide');
+      setTimeout(function() { getLight(item, index+1); }, 200);
+      
     });
     
     light.appendChild(prevbutton);
@@ -322,9 +328,12 @@ function getLight(item, index) {
 }
 
 function getClose() {
-    var light = document.getElementById("lightbox");
+    const light = document.getElementById("lightbox");
+    const lightimg = document.getElementById("lightimg");
+    
+    lightimg.classList.add('hide');
+    
+    setTimeout(function() { light.style.display = "none"; }, 500);
 
-    light.style.display = "none";
+    
 }
-
-
