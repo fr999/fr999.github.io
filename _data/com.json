@@ -3042,8 +3042,8 @@
     },
    {
         "adult": "false",
-        "overview": "",
-        "release_date": "",
+        "overview": "Dans un futur proche, où l'intelligence artificielle est une réalité et où les androïdes font désormais partie de la société humaine, vous serez confronté à de nombreux choix, dont la plupart aboutiront à des résultats différents. Le plan est de créer une histoire très complexe, avec de nombreux chemins différents à parcourir. Vous donnant la possibilité de l'adapter à votre goût.",
+        "release_date": "2022/06/11",
         "genre": [
             "3DCG"
         ],
@@ -3058,18 +3058,19 @@
         "id": 125,
         "sponso": 0,
         "original_language": "en",
-        "title": "Divergence: Beyond the Singularity",
-        "version": "Ch.14",
+        "title": "Divergence: Beyond the Singularity Part.1",
+        "version": "0.15.0",
         "backdrop": "https://attachments.f95zone.to/2020/05/671786_banner.png",
         "vote_count": "3.5",
-        "url_file": "https://f95zone.to/threads/divergence-beyond-the-singularity-ch-14-artifixion.52337/",
-        "url_translate": "https://f95zone.to/threads/divergence-beyond-the-singularity-french-translation-ch-14-v0-14-1-wckd_fox.100371/",
-        "url_creator": "",
+        "url_file": "https://f95zone.to/threads/divergence-beyond-the-singularity-v0-16-1-public-artifixion.52337/",
+        "url_translate": "https://mega.nz/file/5IxnHCaA#i9c7MV6IUuGqssnZhnPcJH6z6-BAAC4r-Xo7iIBdtXI",
+        "url_creator": "https://www.patreon.com/artifixion",
+        "creator": "Artifixion",
         "creator_translate": "WCKD_FOX",
-        "version_translate": "Ch.14",
+        "version_translate": "0.15.0",
         "type_translate": "Traduction Humaine",
         "info_translate": "",
-        "threads_translate": ""
+        "threads_translate": "https://f95zone.to/threads/divergence-beyond-the-singularity-french-translation-ch-16-v0-16-1-wckd_fox.100371/"
     },
     {
         "adult": "false",
@@ -11411,6 +11412,38 @@
         "type_translate": "Traduction Humaine",
         "info_translate": "",
         "threads_translate": "https://f95zone.to/threads/traduction-en-francais-french-translation.26002/page-170#post-8285825"
+    },
+    {
+        "adult": "false",
+        "overview": "Dans un futur proche, où l'intelligence artificielle est une réalité et où les androïdes font désormais partie de la société humaine, vous serez confronté à de nombreux choix, dont la plupart aboutiront à des résultats différents. Le plan est de créer une histoire très complexe, avec de nombreux chemins différents à parcourir. Vous donnant la possibilité de l'adapter à votre goût.",
+        "release_date": "2022/06/11",
+        "genre": [
+            "3DCG"
+        ],
+        "images": [
+            "https://attachments.f95zone.to/2020/05/671788_J1VdulG.png",
+            "https://attachments.f95zone.to/2020/05/671789_LqR3yKa.jpg",
+            "https://attachments.f95zone.to/2020/05/671791_vLZ8x0n.jpg",
+            "https://attachments.f95zone.to/2020/05/671791_vLZ8x0n.jpg",
+            "https://attachments.f95zone.to/2020/05/671788_J1VdulG.png",
+            "https://attachments.f95zone.to/2020/05/671789_LqR3yKa.jpg"
+        ],
+        "id": 405,
+        "sponso": 0,
+        "original_language": "en",
+        "title": "Divergence: Beyond the Singularity Part.2",
+        "version": "0.16.1",
+        "backdrop": "https://attachments.f95zone.to/2020/05/671786_banner.png",
+        "vote_count": "3.5",
+        "url_file": "https://f95zone.to/threads/divergence-beyond-the-singularity-v0-16-1-public-artifixion.52337/",
+        "url_translate": "https://mega.nz/file/tQZiyJzS#WpeQYTydygU_7cJJbqJfGjKJ0ae0BHwC67DXxKFFrTw",
+        "url_creator": "https://www.patreon.com/artifixion",
+        "creator": "Artifixion",
+        "creator_translate": "WCKD_FOX",
+        "version_translate": "0.16.1",
+        "type_translate": "Traduction Humaine",
+        "info_translate": "",
+        "threads_translate": "https://f95zone.to/threads/divergence-beyond-the-singularity-french-translation-ch-16-v0-16-1-wckd_fox.100371/"
     }
 
 
