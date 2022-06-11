@@ -129,8 +129,8 @@ function showMovies(movies, respData) {
       <div class="likes">`+ repoLIKE +`</div>
         <div class="book-button">
         <li>
-        <a href="${url_file}" target="_blank"><div class="book-see book-yellow">Téléchargement</div></a>
-        </li><li style="flex: auto ;"><a href="${url_creator}" target="_blank"><div class="book-see book-pink"><span>${creator}</span></div></a>
+        <a href="${url_file}" target="_blank"><div class="book-see book-yellow">Téléchargement: <span>F95zone</span></div></a>
+        </li><li style="flex: auto ;"><a href="${url_creator}" target="_blank"><div class="book-see book-pink">Soutenir: <span>${creator}</span></div></a>
         </li></div>`
 
         // const imglight1 = movieEl1.querySelector(".dialog-image");
@@ -213,7 +213,7 @@ function showMovies(movies, respData) {
       <div class="book-button">
       <li>
       <a href="${url_translate}" target="_blank"><div class="book-see book-blue">Téléchargement</div></a>
-      </li><li><a href="${threads_translate}" target="_blank"><div class="book-see book-purple">Discussion</div></a>
+      </li><li><a href="${threads_translate}" target="_blank"><div class="book-see book-purple">Discussion: <span>F95zone</span></div></a>
       </li></div>`;
 
       // const imglight4 = movieEl4.querySelector(".dialog-image");
