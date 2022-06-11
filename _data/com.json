@@ -5871,9 +5871,7 @@
         "adult": "false",
         "overview": "Vous incarnez Lolita, une jeune étudiante qui vient d'avoir 18 ans. Plus que toute autre chose, elle veut s'émanciper et ne veut plus être naïve. Vous devrez l'aider à découvrir la vie : elle devra trouver un travail pour payer son loyer, acheter de la nourriture et des vêtements (et d'autres choses moins avouables).",
         "release_date": "2022/06/04",
-        "genre": [
-            "RPGM"
-        ],
+        "genre": ["3dg", "ani", "inc", "2dg"],
         "images": [
             "https://attachments.f95zone.to/2020/03/603327_05-pee.png",
             "https://attachments.f95zone.to/2020/03/603329_07-rent1.png",
@@ -5895,7 +5893,7 @@
         "creator":"Pepette",
         "creator_translate": "Incluse",
         "version_translate": "CG159b",
-        "type_translate": "?",
+        "type_translate": "Humaine",
         "info_translate": "",
         "threads_translate": ""
     },
