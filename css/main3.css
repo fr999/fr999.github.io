@@ -24,6 +24,7 @@
 
 }
 
+
 .test {
   color: #cbb5e2;
   color: #fbadaf;
@@ -31,6 +32,7 @@
   color: #edb9d6;
   color: #fdca95;
 }
+
 
 .light-next{
   position: fixed;
@@ -528,9 +530,6 @@ body {
   align-items: center;
 }
 
-.likes {
-  margin: 10px 0 0px 0;
-}
 
 .book-store {
   display: flex;
@@ -984,6 +983,7 @@ a:hover .book-see.book-purple  {
   
 }
 
+
 .book-name {
   font-weight: 500;
   font-size: 16px;
@@ -1067,12 +1067,34 @@ a:hover .book-see.book-purple  {
   margin-left: auto;
 }
 
+.likes {
+  margin: 10px 0 0px 0;
+}
+
 
 .like-profile {
   margin-top: 8px;
 }
 .like-profile + .like-profile {
   margin-left: -5px;
+}
+
+
+.like-profile svg {
+  width: 16px;
+  padding: 3px;
+  background-color: #dddddd;
+  color:#494949;
+  border-radius: 20%;
+  box-shadow: -1px 2px 5px -1px rgb(0 0 0 / 10%)
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.10);
+  
+}
+
+.yellow svg {
+  background-color:#FFA500;
+
 }
 
 .like-img {
@@ -1082,12 +1104,51 @@ a:hover .book-see.book-purple  {
   border: 2px solid rgba(0, 0, 0, 0.1);
 }
 
+.like-round2 {
+  border-radius: 8px;
+
+  color: hotpink;
+  padding:5px;
+  font-size:20px;
+  font-weight:300px;
+  float:left;
+  width: 24px;
+  height:24px;
+	white-space: nowrap;
+  overflow: hidden;
+  font-family: "IBM Plex Mono", monospace;
+
+  border: 2px solid;
+}
+
+.like-round2 {
+  color: hotpink;
+  padding: 10px;
+  margin: 0 10px;
+  border: 2px solid;
+  border-radius: 8px;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 14px;
+
+}
+
+.like-round {
+background-color: var(--body-bg-color);
+color: #FFF;
+font-size: 12px;
+margin-right: 10px;
+padding: 10px;
+border-radius: 5px;
+box-shadow: -1px 2px 5px -1px rgb(0 0 0 / 10%)
+}
+
+    
 .like-name {
   font-size: 14px;
   margin-left: 15px;
   margin-top: 6px;
   text-overflow: ellipsis;
-  overflow: hidden;
+  /*overflow: hidden;*/
   white-space: nowrap;
 }
 .like-name span {
