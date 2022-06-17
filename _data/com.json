@@ -1,4 +1,4 @@
-com = {{{
+{
     "page": 1,
     "sponso_genre": [
       {
@@ -11410,4 +11410,4 @@ com = {{{
     ],
     "total_results": 19629,
     "total_pages": 982
-  }}}
+  }
