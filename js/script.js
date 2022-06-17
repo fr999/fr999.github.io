@@ -40,16 +40,26 @@ const NumberByPage = Number(10);
 getMovies(APIURL, "", "");
 
 
+
+(function(){
+   //console.log(data['category_genre']); // {"a" : "b", "c" : "d"}
+    //console.log(com['results']); // {"a" : "b", "c" : "d"}
+})();
+
+
+
 async function getMovies(url, searchTerm, catTerm) {
 
-    const resp = await fetch(url);
-    const respData = await resp.json();
-    var result = respData.results;
+    //const resp = await fetch(url);
+    //const respData = await resp.json();
+    //var result = respData.results;
+    var result = com['results'];
    
     
-    const rst_category = respData.category_genre;
-
-    showGenre(rst_category)
+    //const rst_category = respData.category_genre;
+    //showGenre(rst_category);
+    
+    showGenre(com['category_genre']);
 
     if (urlParams.has('q')) {
         searchTerm = urlParams.get('q')
@@ -57,13 +67,13 @@ async function getMovies(url, searchTerm, catTerm) {
         const searchHM = document.getElementById("search");
         search.value = searchTerm
 
-        result = respData.results.filter(el => el.title.toLowerCase().includes(searchTerm.toLowerCase()))
+        result = result.filter(el => el.title.toLowerCase().includes(searchTerm.toLowerCase()))
     }
 
     if (urlParams.has('c')) {
-        catTerm = urlParams.get('c')
+        catTerm = urlParams.getAll('c')
 
-        result = respData.results.filter(el => el.genre.toString().includes(catTerm))
+        result = result.filter(el => el.genre.toString().includes(catTerm))
   
     }
 
@@ -105,7 +115,7 @@ async function getMovies(url, searchTerm, catTerm) {
         
         //load slider et select
         slider =  [...result];
-        showSlider3(slider);
+        showSlider(slider);
         
         showMovies(result);
     }
@@ -119,11 +129,13 @@ function showSlider(sliders) {
     
     
     //sliderHM
-    // console.log(max_count)
     
     let randslide = sliders.sort(() => 0.5 - Math.random())[0];
     
-    sliderHMIMG.src = randslide.backdrop;
+    //sliderHMIMG.src = randslide.backdrop;
+    
+    sliderHM.innerHTML = `<a href="info.html?id=${randslide.id}" title="${randslide.title}"><div class="slide block active" style="background: url(${randslide.backdrop}) no-repeat center center; background-size: cover;"></div></a>`
+
     
 
 }
@@ -179,6 +191,7 @@ function showSlider3(sliders) {
     // console.log(max_count)
     
     list = sliders.sort(() => Math.random() - 0.5)
+    
     
     const backdrop = list[0]['backdrop'];
     
@@ -302,7 +315,7 @@ function showMovies(movies) {
         
         if (version_translate && version != version_translate) {
           
-          notversion =  '<div class="like-profile"><img title="Version du jeux diffèrente de la traduction" src="https://eu.ui-avatars.com/api/?background=FFA500&name=&#x26A0;" alt="" class="like-img"></div>'
+          notversion =  '<div class="like-profile yellow" title="Version du jeux diffèrente de la traduction"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg></div>'
           
         }
         
@@ -324,13 +337,10 @@ function showMovies(movies) {
             </div>
             <div class="likes">
             <div class="like-profile">
-            <img src="https://eu.ui-avatars.com/api/?name=DE" alt="" class="like-img">
-            </div>
-            <div class="like-profile">
-            <img src="https://eu.ui-avatars.com/api/?name=TR" alt="" class="like-img">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
             </div>
             ${notversion}
-            <div class="like-name">Développeur: <span>${creator}</span> | Traducteur: <span>${creator_translate}</span></div>
+            <div class="like-name">Développeur:&ensp;<span>${creator}</span>&emsp;|&emsp;Traducteur:&ensp;<span>${creator_translate}</span></div>
           </div>
         `;
 
