@@ -40,26 +40,21 @@ const NumberByPage = Number(10);
 getMovies(APIURL, "", "");
 
 
-
-(function(){
-   //console.log(data['category_genre']); // {"a" : "b", "c" : "d"}
-    //console.log(com['results']); // {"a" : "b", "c" : "d"}
-})();
-
-
-
 async function getMovies(url, searchTerm, catTerm) {
 
-    //const resp = await fetch(url);
-    //const respData = await resp.json();
-    //var result = respData.results;
-    var result = com['results'];
+    const resp = await fetch(url);
+    const respData = await resp.json();
+    var result = respData.results;
+    
+    
+    //local
+    //var result = com['results'];
+    //const rst_category = com['category_genre'];
    
     
-    //const rst_category = respData.category_genre;
-    //showGenre(rst_category);
+    const rst_category = respData.category_genre;
+    showGenre(rst_category);
     
-    showGenre(com['category_genre']);
 
     if (urlParams.has('q')) {
         searchTerm = urlParams.get('q')
