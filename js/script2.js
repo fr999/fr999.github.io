@@ -28,14 +28,21 @@ showNavInfo();
 getMovies(APIURL);
 
 async function getMovies(url) {
-    //const resp = await fetch(url);
-    //const respData = await resp.json();
-    //const rst_category = respData.category_genre;
+    
+    const resp = await fetch(url);
+    const respData = await resp.json();
+    
+    const rst_category = respData.category_genre;
+    var result = respData.results;
+    
+    //local
+    //var result = com['results']
+    //const rst_category = com['category_genre'];
 
-    const item = com['results'].find(item => item.id === parseInt(c));
+    const item = result.find(item => item.id === parseInt(c));
 
     //const sponsoring = respData.sponso_genre
-    showGenre(com['category_genre'])
+    showGenre(rst_category)
     showMovies(item);
 }
 
