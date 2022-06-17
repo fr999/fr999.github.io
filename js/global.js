@@ -109,11 +109,13 @@ function showGenre(repos) {
     selectMENU.innerText = null;
     //category.appendChild(selectHM);
 
-    var search_ids = urlParams.get('c')
+    var search_ids = urlParams.getAll('c');
+    
 
-    repos.forEach((repo) => {
+    repos.forEach((name) => {
 
-            const { id, name } = repo;
+            //const { name } = repo;
+            
 
             const repoLI = document.createElement("li");
             
@@ -121,12 +123,14 @@ function showGenre(repos) {
             
 
             //repoEl.type = "checkbox";
-            repoEl.href = "index.html?c="+id;
-            repoEl.value = id;
+            repoEl.href = "#";
+            //repoEl.value = id;
             repoEl.text = name;
-            repoEl.id = "id" + id;
+            repoEl.id = "id" + name;
 
-            if (search_ids == id) {
+            //if (search_ids == name) {
+              
+            if (search_ids.includes(name)){
                 //repoEl.class = "active";
                 repoEl.classList.add("active");
                 //repoEl.checked = true;
@@ -142,6 +146,26 @@ function showGenre(repos) {
             //repoLI.innerHTML = name;
 
             repoLI.appendChild(repoEl)
+            
+            
+            repoLI.addEventListener("click", function(e) {
+              //vire l'id
+              urlParams.delete('id');
+              urlParams.delete('page');
+              //vire les doublons
+              if (search_ids.includes(name)){
+                //urlParams.delete('c', name);
+                const updatedParams = new URLSearchParams([...urlParams].filter(([key, value]) => key !== 'c' || value !== name));
+                window.location.href = "index.html?"+updatedParams;
+                return
+              } else {
+                urlParams.append('c', name)
+              }
+              window.location.href = "index.html?"+urlParams;
+
+
+            });
+            
             //selectHM.appendChild(repoLI);
             selectMENU.appendChild(repoLI)
         });
@@ -160,7 +184,7 @@ form.addEventListener("submit", (e) => {
    
     if (searchTerm) {
         //getMovies(APIURL, searchTerm);
-        urlParams.delete('c');
+        //urlParams.delete('c');
         urlParams.delete('id');
         urlParams.set('q', searchTerm);
 
