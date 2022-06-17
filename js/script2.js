@@ -28,15 +28,15 @@ showNavInfo();
 getMovies(APIURL);
 
 async function getMovies(url) {
-    const resp = await fetch(url);
-    const respData = await resp.json();
-    const rst_category = respData.category_genre;
+    //const resp = await fetch(url);
+    //const respData = await resp.json();
+    //const rst_category = respData.category_genre;
 
-    const item = respData.results.find(item => item.id === parseInt(c));
+    const item = com['results'].find(item => item.id === parseInt(c));
 
     //const sponsoring = respData.sponso_genre
-    showGenre(rst_category)
-    showMovies(item, respData);
+    showGenre(com['category_genre'])
+    showMovies(item);
 }
 
 function clonearr(array) {
@@ -47,38 +47,42 @@ function clonearr(array) {
   return array
 }
 
-function showMovies(movies, respData) {
+function showMovies(movies) {
     // clear main
     main.innerHTML = "";
 
         const { backdrop, sponso, title, genre, version, overview, images, creator , url_creator, url_file, url_translate, creator_translate, version_translate, type_translate, info_translate, threads_translate, release_date} = movies;
 
-        const sponsoring = respData.sponso_genre
+        //const sponsoring = respData.sponso_genre
 
-        const category_genre = respData.category_genre
+        //const category_genre = respData.category_genre
         
         const previewimg = clonearr([...images]);
 
         // const repoLIKE = document.createElement("div");
         // repoLIKE.classList.add("likes");
 
-        var repoLIKE = ``;
+        var repoLIKE = `<div class="like-profile"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg></div>`;
         var repoNAME = ``;
 
         //genre
-        genre.forEach((gr) => {
-            category_genre.find( function(item) {
-                if (item.id == gr) {
+        genre.slice(0, 5).forEach((gr) => {
+            
+            //category_genre.find( function(item) {
+                //if (item.id == gr) {
 
-                    repoLIKE = repoLIKE +`
-                    <div class="like-profile">
-                    <img src="https://eu.ui-avatars.com/api/?name=`+item.id+`" alt="" class="like-img">
-                   </div>
-                    `
-                    repoNAME = repoNAME + `<div class="like-name">`+item.name+`</div>`;
-                }
-             });
+
+                    
+                    repoNAME = repoNAME + `<div class="like-name">`+gr+`</div>`;
+                //}
+             //});
         })
+        
+        if (genre.length > 5) {
+          
+          repoNAME  = repoNAME + '<div class="like-name" title="'+genre+'">plus...</div>';
+        }
+        
 
         repoLIKE = repoLIKE + repoNAME;
         
@@ -86,7 +90,7 @@ function showMovies(movies, respData) {
         
         if (version_translate && version != version_translate) {
           
-          notversion =  '<div class="like-profile"><img title="Version du jeux diffèrente de la traduction" src="https://eu.ui-avatars.com/api/?background=FFA500&name=&#x26A0;" alt="" class="like-img"></div>'
+          notversion =  '<div class="like-profile yellow" title="Version du jeux diffèrente de la traduction"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg></div>'
           
         }
 
@@ -121,9 +125,9 @@ function showMovies(movies, respData) {
 
         <div class="likes">
         <div class="like-profile">
-       <img src="https://eu.ui-avatars.com/api/?name=DE" alt="" class="like-img">
+       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
       </div>
-        <div class="like-name">Développeur: <span>${creator}</span></div>
+        <div class="like-name">Développeur:&ensp;<span>${creator}</span></div>
       </div>
 
       <div class="likes">`+ repoLIKE +`</div>
@@ -196,18 +200,18 @@ function showMovies(movies, respData) {
 
         <div class="likes">
         <div class="like-profile">
-       <img src="https://eu.ui-avatars.com/api/?name=TR" alt="" class="like-img">
+     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="16 3 21 8 8 21 3 21 3 16 16 3"></polygon></svg>
       </div>
-        <div class="like-name">Traducteur: <span>${creator_translate}</span></div>
+        <div class="like-name">Traducteur:&ensp;<span>${creator_translate}</span></div>
       </div>
 
 
       <div class="likes">
         <div class="like-profile">
-          <img src="https://eu.ui-avatars.com/api/?name=TY" alt="" class="like-img">
+     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
         </div>
         ${notversion}
-        <div class="like-name">Type: <span>${type_translate}</span></div>
+        <div class="like-name">Type:&ensp;<span>${type_translate}</span></div>
       </div>
 
       <div class="book-button">
@@ -337,5 +341,3 @@ function getClose() {
 
     
 }
-
-
