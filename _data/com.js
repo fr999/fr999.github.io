@@ -1,4 +1,4 @@
-com = {
+var com = {
     "page": 1,
     "sponso_genre": [
       {
