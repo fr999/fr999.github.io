@@ -1,4 +1,4 @@
-var com = {
+const com = {
     "page": 1,
     "sponso_genre": [
       {
