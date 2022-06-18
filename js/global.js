@@ -186,6 +186,7 @@ form.addEventListener("submit", (e) => {
         //getMovies(APIURL, searchTerm);
         //urlParams.delete('c');
         urlParams.delete('id');
+        urlParams.delete('page');
         urlParams.set('q', searchTerm);
 
         window.location = 'index.html?'+urlParams;
