@@ -1151,6 +1151,7 @@ box-shadow: -1px 2px 5px -1px rgb(0 0 0 / 10%)
   /*overflow: hidden;*/
   white-space: nowrap;
 }
+
 .like-name span {
   font-weight: 500;
 }
@@ -1158,6 +1159,42 @@ box-shadow: -1px 2px 5px -1px rgb(0 0 0 / 10%)
 .like-name a:hover {
   color:var(--body-color);
 }
+
+[data-title], [data-genre] {
+
+  cursor: pointer;
+}
+
+
+[data-title]:hover::before, [Data-genre]:hover::before {
+  position: absolute;
+  left:30px;
+  top:30px;
+  display: inline-block;
+  padding: 5px 6px;
+  margin: 0 70px 0 0;
+  border-radius: 2px;
+  background: #000;
+  color: #fff;
+  font-size: 13px;
+  line-height:18px;
+  letter-spacing:.5px;
+  box-shadow: -1px 5px 10px 0px rgb(0 0 0 / 40%);
+  transition: opacity 5s;
+  z-index: 20;
+}
+
+[data-title]:hover::before {
+  content: attr(data-title);
+  white-space: nowrap;
+}
+
+[Data-genre]:hover::before {
+  content: attr(data-genre);
+  white-space: normal;
+}
+
+
 
 @media (max-width: 1103px) {
   .book-cell {
