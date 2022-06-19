@@ -129,7 +129,7 @@ function showSlider(sliders) {
     
     //sliderHMIMG.src = randslide.backdrop;
     
-    sliderHM.innerHTML = `<a href="info.html?id=${randslide.id}" title="${randslide.title}"><div class="slide block active" style="background: url(${randslide.backdrop}) no-repeat center center; background-size: cover;"></div></a>`
+    sliderHM.innerHTML = `<a href="info.html?id=${randslide.id}" data-title="${randslide.title}"><div class="slide block active" style="background: url(${randslide.backdrop}) no-repeat center center; background-size: cover;"></div></a>`
 
     
 
@@ -310,7 +310,7 @@ function showMovies(movies) {
         
         if (version_translate && version != version_translate) {
           
-          notversion =  '<div class="like-profile yellow" title="Version du jeux diffèrente de la traduction"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg></div>'
+          notversion =  '<div class="like-profile yellow" data-title="Version du jeux diffèrente de la traduction"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg></div>'
           
         }
         
